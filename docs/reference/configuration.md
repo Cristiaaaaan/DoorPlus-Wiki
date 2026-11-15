@@ -176,7 +176,7 @@ How moving doors treat players and entities. See [Movement](../doors/movement.md
 |---|---|---|---|---|
 | `types.<type>.enabled` | `true`/`false` | `true` | | `false` prevents creating new doors of that type. Existing doors keep working. `<type>` is a type id such as `big_door`. |
 | `types.platform.carry-entities` | `true`/`false` | `true` | | Platforms carry the players and entities standing on them. |
-| `types.windmill.degrees-per-second` | decimal | `30.0` | `1` to `3600` | Rotation speed of windmills that have no own speed set (`/dp set <door> degrees-per-second`). |
+| `types.windmill.degrees-per-second` | decimal | `30.0` | `1` to `360` | Rotation speed of windmills that have no own speed set (`/dp set <door> degrees-per-second`). |
 | `types.flag.amplitude` | decimal | `0.6` | `0` to `4` | Height of the flag wave, in blocks. |
 | `types.flag.wavelength` | decimal | `6.0` | `0.5` to `128` | Length of one wave, in blocks. |
 | `types.flag.period-ticks` | number | `40` | `2` to `1200` | Time for one full wave. |

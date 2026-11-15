@@ -62,8 +62,12 @@ You need the **Admin** role on the door and the permissions `doorplus.trigger.en
 You see **Linked Furniture trigger #&lt;id&gt; to &lt;door&gt;.**
 
 !!! note "ItemsAdder complex furniture"
-    ItemsAdder does not let other plugins identify complex (multi-block) furniture once it is placed, so Door+
-    cannot link it: you see **This object is not recognised yet. Try again in a moment.** Simple furniture works.
+    Complex (multi-entity) furniture works like simple furniture. Door+ stores the id of its custom entity, which
+    can differ from the id of the furniture item: `/dp trigger inspect` shows the stored id.
+
+!!! note "Oraxen shaped blocks"
+    Custom stairs, slabs, doors and trapdoors of Oraxen work as custom blocks. A two-block door counts only on the
+    half you linked.
 
 ## How these triggers behave
 

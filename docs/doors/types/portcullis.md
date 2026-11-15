@@ -62,8 +62,7 @@ The portcullis has no type settings, but it uses the general **blocks to move** 
 
 - **Speed**: `distance / (speed.blocks-per-second × speed multiplier)` seconds. The 4-block gate above takes 2 seconds
   with the default 2 blocks per second.
-- **Checks**: the cells where the portcullis ends up must be free. When it moves by its own height or less, these are
-  all the cells it passes through.
+- **Checks**: the cells where the portcullis ends up and every cell it passes through on the way must be free.
 - **Entities**: see [Collisions](../movement.md#collisions).
 
 ## Sounds
@@ -87,8 +86,8 @@ See [Sounds](../movement.md#sounds) for the format.
     [Passable blocks](../movement.md#passable-blocks).
 
 !!! warning "Blocks to move larger than the height"
-    If `blocks-to-move` is larger than the height of the gate, the cells between the gate and its open position are
-    not checked: the gate passes through whatever is there and only its end position must be free.
+    If `blocks-to-move` is larger than the height of the gate, the cells between the gate and its open position must
+    be free too (or passable, such as barrier).
 
 !!! warning "Cannot open: something is in the way"
     A block in the open position, often a torch or the lintel of the wall above the gate. The message gives its

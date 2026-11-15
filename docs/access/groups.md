@@ -76,7 +76,9 @@ A group holds at most `limits.max-doors-per-group` doors (default `16`). When fu
 
 === "Door menu"
 
-    In **Groups of `<door>`**, right click the group.
+    In **Groups of `<door>`**, right click the group. Only the group owner or the **owner** of the door can do
+    this; anyone else gets **Only the owner of the group `<group>` or the owner of the door can remove it from the
+    group.**
 
 === "Command"
 
@@ -85,8 +87,8 @@ A group holds at most `limits.max-doors-per-group` doors (default `16`). When fu
     ```
 
 !!! note
-    In the door menu **Groups**, any admin or owner of the door can remove it from a group, even from a group
-    owned by someone else. In the group menu and with the command, only the group owner can.
+    In the group menu and with the command, only the group owner can remove doors. The owner of a door can also
+    take it out of someone else's group from the door menu **Groups**.
 
 ## Operate a group
 

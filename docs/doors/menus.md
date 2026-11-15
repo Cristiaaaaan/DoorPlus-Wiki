@@ -290,4 +290,4 @@ Open it from **Groups** in the door menu (Admin). Title: **Groups of** followed 
 | Button | Effect |
 |---|---|
 | **Add to a group** | Opens **Choose one of your groups**. Click a group to add the door. |
-| A group | Left click: opens the group menu (if you can manage it). Right click: removes the door from the group. |
+| A group | Left click: opens the group menu (if you can manage it). Right click: removes the door from the group (group owner or door owner only). |

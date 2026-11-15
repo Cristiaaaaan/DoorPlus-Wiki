@@ -115,8 +115,8 @@ See [Sounds](../movement.md#sounds) for the format.
     0. Send it there with `/dp goto <door> 0` first.
 
 !!! tip "Shaft"
-    Only the arrival position of each stop is checked. Keep the shaft between the stops empty yourself, or the
-    platform's blocks pass through whatever is there.
+    The whole shaft between the current stop and the target stop must be free (or passable, such as barrier):
+    otherwise the platform refuses to move and tells you which block is in the way.
 
 !!! tip "Call buttons"
     Put a button on each floor and link it to the platform with the **Go to stop** action and the number of that

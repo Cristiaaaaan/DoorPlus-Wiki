@@ -80,11 +80,12 @@ door menu, while the windmill is inactive and not moving.
 | Menu | **Type settings** → **Rotation speed** (left +1, right −1, shift ×10) |
 | Values | `1` to `360` |
 | Default | `types.windmill.degrees-per-second` (default 30), limited to 1–360 |
-| When | Any time. A running windmill keeps its speed; the new value is used the next time it starts (or after a server restart) |
+| When | Any time. A running windmill changes speed at once, without jumping |
 
 The door's speed multiplier and the `speed.*` settings do not affect windmills. **Blocks to move** does not apply.
 
-Config key `types.windmill.degrees-per-second` sets the speed of windmills that have no own value.
+Config key `types.windmill.degrees-per-second` sets the speed of windmills that have no own value. After changing it,
+`/dp admin reload` applies it to running windmills too.
 
 ## On the move
 

@@ -69,10 +69,10 @@ click the second corner from the other side.
 |---|---|
 | Option | `time-source` |
 | Command | `/dp set <door> time-source world` or `real` |
-| Menu | **Type settings** → **Time source** (click to switch; the button shows `WORLD` or `REAL`) |
+| Menu | **Type settings** → **Time source** (click to switch; the button shows **World time** or **Real time**) |
 | Values | `world`: the time of the Minecraft world the clock is in (world tick 0 = 06:00). `real`: the real time |
 | Default | `world` |
-| When | Any time. A running clock keeps its source; the new one is used the next time it starts (or after a server restart) |
+| When | Any time. A running clock switches source at once: the hands move to the new time |
 
 Config key `types.clock.timezone` (default `system`) sets the time zone for real time: `system` uses the server's
 zone; otherwise use a zone id such as `Europe/Rome` or `UTC`. An invalid zone is reported in the console and the

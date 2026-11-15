@@ -43,7 +43,7 @@ in [Why a door does not move](#why-a-door-does-not-move).
 | 7 | Cooldown | Less than `movement.toggle-cooldown-ticks` since the last movement of this door ended |
 | 8 | Blocks | A block of the door is not allowed in doors (see [Which blocks can move](#which-blocks-can-move)) |
 | 9 | World height | The end position goes above or below the world's height limits |
-| 10 | Free space | A cell of the end position is not free, belongs to another door, or (rotating types) a cell the door sweeps through is not free. See [Free space](#free-space) |
+| 10 | Free space | A cell of the end position is not free or belongs to another door, or a cell the door passes through on the way is not free. See [Free space](#free-space) |
 | 11 | Protection | A protection plugin such as WorldGuard denies the end position. See [WorldGuard](../integrations/worldguard.md) |
 | 12 | Other plugins | Another plugin cancelled the movement through the Door+ API |
 
@@ -67,10 +67,11 @@ classes:
 Door+ also refuses to move a door into a cell that belongs to **another door**, whether that door is standing still
 or moving there at the same moment.
 
-**Swept volume**: the big door, drawbridge, folding door and revolving door turn, so their blocks pass through cells
-outside both the start and end positions (a quarter circle). With `movement.check-swept-volume: true` (default) those
-cells must be free too. The types that slide (portcullis, sliding door, split door, platform) are checked only at the
-end position: the cells between start and end are not checked.
+**Path**: while moving, blocks pass through cells that belong to neither the start nor the end position: the quarter
+circle of a big door, drawbridge, folding door or revolving door, the gap crossed by a portcullis, sliding door or
+split door that moves farther than its own size, the shaft between two platform stops, the diagonal path of split
+door quadrants. With `movement.check-swept-volume: true` (default) every one of those cells must be free too
+(replaceable or passable). Set it to `false` to check only the end position.
 
 !!! note
     When you create a door whose end position is blocked, Door+ still creates it and warns: **Warning: the
@@ -242,7 +243,10 @@ The [windmill](types/windmill.md), [flag](types/flag.md) and [clock](types/clock
 - **Animated or resting**: an active door is animated only while its chunks are loaded and a player is within
   `animation.viewer-range` blocks. Otherwise it *rests*: its blocks are in the world in their built position. Door+
   checks every `perpetual.check-interval-ticks` (default 20, allowed 1 to 1200) and switches between the two. The
-  position depends only on the time since it was started, so it looks continuous when you come back.
+  position follows the time since it was started, so it looks continuous when you come back.
+- **Changing settings while active**: the windmill speed, the clock time source (`/dp set` or **Type settings**) and
+  the `types.flag.*` / `types.windmill.degrees-per-second` keys (after `/dp admin reload`) apply to a running door at
+  once, continuing from its current position.
 - **Animation limits**: a door that would pass `animation.max-animated-blocks` or
   `animation.max-global-animated-blocks` keeps resting.
 - **Changes while resting**: if someone changes the blocks of a resting door, the saved copy is updated the next time
@@ -303,7 +307,7 @@ A door can close by itself some seconds after it opens.
 | `/dp admin pause` | `doorplus.admin.pause` | Pauses all door movements; run it again to resume. New requests are refused, running animations finish normally | **Door movements paused.** / **Door movements resumed.** |
 | `/dp admin stopall` | `doorplus.admin.stopall` | Finishes every running animation instantly. Animated perpetual doors go to rest; they stay active and start again at the next check if a player is near | **Finished N running animations.** |
 | `/dp admin cleanup` | `doorplus.admin.cleanup` | Removes left-over moving-block entities in loaded chunks | **Removed N orphan entities.** |
-| `/dp admin reload` | `doorplus.admin.reload` | Reloads `config.yml` (except `storage`) and the language files | **Configuration and language files reloaded.** |
+| `/dp admin reload` | `doorplus.admin.reload` | Reloads `config.yml` (except `storage` and `integrations`, which need a restart) and the language files | **Configuration and language files reloaded.** |
 
 ## Sounds
 
@@ -340,7 +344,7 @@ These are the messages the player who used the door (or the command sender) can 
 | **... is locked.** (action bar) | The door is locked | `/dp unlock <door>` |
 | **You cannot use ....** (action bar) | The player has no access | Change the privacy or add the player; see [Privacy and roles](../access/privacy-and-roles.md) |
 | **... cannot move: the block at x, y, z cannot be animated.** | A blacklisted block, a block outside the whitelist, or a block with a block entity is in the door | Remove that block, or change `blocks.blacklist` / `blocks.whitelist` |
-| **... cannot move: something is in the way at x, y, z.** | That cell of the end position (or of the swept area) is not free, or belongs to another door | Remove the block, move the other door, or change the direction |
+| **... cannot move: something is in the way at x, y, z.** | That cell of the end position, or of the path the door travels, is not free, or belongs to another door | Remove the block, move the other door, or change the direction |
 | **... cannot move beyond the height limits of the world.** | The end position is above or below the world limits | Change the direction, the blocks to move or the stops |
 | **... cannot move here: denied by ....** | A protection plugin (named in the message) denies the end position | Allow the door in that plugin; see [WorldGuard](../integrations/worldguard.md) |
 | **... could not move because of an error. Details are in the server console.** | Unexpected error | Check the console and report it |

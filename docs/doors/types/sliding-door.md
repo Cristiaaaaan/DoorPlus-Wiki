@@ -68,8 +68,8 @@ The sliding door has no type settings, but it uses the general **blocks to move*
 
 - **Speed**: `distance / (speed.blocks-per-second × speed multiplier)` seconds. 3 blocks at the default 2 blocks per
   second take 1.5 seconds.
-- **Checks**: only the end position is checked. If `blocks-to-move` is larger than the door's width, the cells between
-  the doorway and the end position are not checked.
+- **Checks**: the end position and, if `blocks-to-move` is larger than the door's width, the cells between the
+  doorway and the end position (see [Free space](../movement.md#free-space)).
 - **Entities**: see [Collisions](../movement.md#collisions).
 
 ## Sounds

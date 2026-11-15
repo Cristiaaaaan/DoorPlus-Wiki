@@ -60,8 +60,8 @@ The flag has no per-door settings. The wave is set for every flag on the server 
 | `types.flag.wavelength` | `6.0` | 0.5 to 128 | Length of one wave, in blocks |
 | `types.flag.period-ticks` | `40` | 2 to 1200 | Time of one full wave cycle, in ticks (20 ticks = 1 second) |
 
-A flag reads these values when it starts: after changing them and running `/dp admin reload`, stop and start the
-flag (or restart the server) to see the new wave. **Blocks to move** and the speed multiplier do not apply.
+After changing these values, run `/dp admin reload`: running flags take the new wave at once, without jumping.
+**Blocks to move** and the speed multiplier do not apply.
 
 ## On the move
 

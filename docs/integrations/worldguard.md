@@ -107,8 +107,10 @@ If WorldGuard is not active, you can still switch the option on, but it has no e
 not active on this server.**
 
 !!! warning
-    Door+ does not warn you when the door is **Private**. Make it Restricted with `/dp privacy <door> restricted`,
-    otherwise region members still cannot use it. See [Privacy and roles](../access/privacy-and-roles.md).
+    Region access works only on **Restricted** doors. When the door is **Private**, the region access button shows
+    **The door is PRIVATE: set it to RESTRICTED for region access to work.**, and switching region access on (or
+    making such a door Private) by command shows **`<door>` is PRIVATE: region members can open it only when it is
+    RESTRICTED (/door privacy `<door>` restricted).** See [Privacy and roles](../access/privacy-and-roles.md).
 
 ## Troubleshooting
 

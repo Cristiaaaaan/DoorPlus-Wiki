@@ -77,7 +77,8 @@ The split door also uses the general **blocks to move** setting (`/dp set <door>
 ## On the move
 
 - **Speed**: `distance / (speed.blocks-per-second × speed multiplier)` seconds, using the panel that moves farthest.
-- **Checks**: only the end positions of the panels are checked, not the cells they pass through.
+- **Checks**: the end positions of the panels and the cells they pass through, diagonal paths included (see
+  [Free space](../movement.md#free-space)).
 - **Entities**: see [Collisions](../movement.md#collisions).
 
 ## Sounds
