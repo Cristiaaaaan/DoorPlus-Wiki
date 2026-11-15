@@ -2655,8 +2655,7 @@ not moving.</p>
 <ul>
 <li><strong>Speed</strong>: <code>distance / (speed.blocks-per-second × speed multiplier)</code> seconds. The 4-block gate above takes 2 seconds
   with the default 2 blocks per second.</li>
-<li><strong>Checks</strong>: the cells where the portcullis ends up must be free. When it moves by its own height or less, these are
-  all the cells it passes through.</li>
+<li><strong>Checks</strong>: the cells where the portcullis ends up and every cell it passes through on the way must be free.</li>
 <li><strong>Entities</strong>: see <a href="../../movement/#collisions">Collisions</a>.</li>
 </ul>
 <h2 id="sounds">Sounds<a class="headerlink" href="#sounds" title="Permanent link">&para;</a></h2>
@@ -2694,8 +2693,8 @@ takes their place, and when it comes back up the barriers return. See
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Blocks to move larger than the height</p>
-<p>If <code>blocks-to-move</code> is larger than the height of the gate, the cells between the gate and its open position are
-not checked: the gate passes through whatever is there and only its end position must be free.</p>
+<p>If <code>blocks-to-move</code> is larger than the height of the gate, the cells between the gate and its open position must
+be free too (or passable, such as barrier).</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Cannot open: something is in the way</p>

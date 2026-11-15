@@ -2757,7 +2757,7 @@ restart; <code>/dp admin reload</code> only logs <code>Changes to the 'storage' 
 </tr>
 <tr>
 <td><strong>&lt;door&gt; cannot move: something is in the way at &lt;x&gt;, &lt;y&gt;, &lt;z&gt;.</strong></td>
-<td>A block, or another door, is in the destination or, for rotating doors, in the arc the door sweeps (<code>movement.check-swept-volume</code>)</td>
+<td>A block, or another door, is in the destination or on the path the door travels (<code>movement.check-swept-volume</code>)</td>
 <td>Clear that block. Blocks in <code>blocks.replaceable</code> (water, grass, snow, ...) and <code>blocks.passable</code> (barrier, light, structure void) never block a door</td>
 </tr>
 <tr>

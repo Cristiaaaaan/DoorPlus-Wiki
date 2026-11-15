@@ -5181,8 +5181,7 @@ not moving.</p>
 <ul>
 <li><strong>Speed</strong>: <code>distance / (speed.blocks-per-second × speed multiplier)</code> seconds. The 4-block gate above takes 2 seconds
   with the default 2 blocks per second.</li>
-<li><strong>Checks</strong>: the cells where the portcullis ends up must be free. When it moves by its own height or less, these are
-  all the cells it passes through.</li>
+<li><strong>Checks</strong>: the cells where the portcullis ends up and every cell it passes through on the way must be free.</li>
 <li><strong>Entities</strong>: see <a href="#doors-movement-collisions">Collisions</a>.</li>
 </ul>
 <h2 id="doors-types-portcullis-sounds">Sounds<a class="headerlink" href="#doors-types-portcullis-sounds" title="Permanent link">&para;</a></h2>
@@ -5220,8 +5219,8 @@ takes their place, and when it comes back up the barriers return. See
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Blocks to move larger than the height</p>
-<p>If <code>blocks-to-move</code> is larger than the height of the gate, the cells between the gate and its open position are
-not checked: the gate passes through whatever is there and only its end position must be free.</p>
+<p>If <code>blocks-to-move</code> is larger than the height of the gate, the cells between the gate and its open position must
+be free too (or passable, such as barrier).</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Cannot open: something is in the way</p>
@@ -5335,8 +5334,8 @@ closed and not moving.</p>
 <ul>
 <li><strong>Speed</strong>: <code>distance / (speed.blocks-per-second × speed multiplier)</code> seconds. 3 blocks at the default 2 blocks per
   second take 1.5 seconds.</li>
-<li><strong>Checks</strong>: only the end position is checked. If <code>blocks-to-move</code> is larger than the door's width, the cells between
-  the doorway and the end position are not checked.</li>
+<li><strong>Checks</strong>: the end position and, if <code>blocks-to-move</code> is larger than the door's width, the cells between the
+  doorway and the end position (see <a href="#doors-movement-free-space">Free space</a>).</li>
 <li><strong>Entities</strong>: see <a href="#doors-movement-collisions">Collisions</a>.</li>
 </ul>
 <h2 id="doors-types-sliding-door-sounds">Sounds<a class="headerlink" href="#doors-types-sliding-door-sounds" title="Permanent link">&para;</a></h2>
@@ -5633,7 +5632,8 @@ and <em>north–south</em>.</p>
 <h2 id="doors-types-split-door-on-the-move">On the move<a class="headerlink" href="#doors-types-split-door-on-the-move" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Speed</strong>: <code>distance / (speed.blocks-per-second × speed multiplier)</code> seconds, using the panel that moves farthest.</li>
-<li><strong>Checks</strong>: only the end positions of the panels are checked, not the cells they pass through.</li>
+<li><strong>Checks</strong>: the end positions of the panels and the cells they pass through, diagonal paths included (see
+  <a href="#doors-movement-free-space">Free space</a>).</li>
 <li><strong>Entities</strong>: see <a href="#doors-movement-collisions">Collisions</a>.</li>
 </ul>
 <h2 id="doors-types-split-door-sounds">Sounds<a class="headerlink" href="#doors-types-split-door-sounds" title="Permanent link">&para;</a></h2>
@@ -6167,8 +6167,8 @@ to this type: the stops replace it.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Shaft</p>
-<p>Only the arrival position of each stop is checked. Keep the shaft between the stops empty yourself, or the
-platform's blocks pass through whatever is there.</p>
+<p>The whole shaft between the current stop and the target stop must be free (or passable, such as barrier):
+otherwise the platform refuses to move and tells you which block is in the way.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Call buttons</p>
@@ -6484,12 +6484,13 @@ door menu, while the windmill is inactive and not moving.</p>
 </tr>
 <tr>
 <td>When</td>
-<td>Any time. A running windmill keeps its speed; the new value is used the next time it starts (or after a server restart)</td>
+<td>Any time. A running windmill changes speed at once, without jumping</td>
 </tr>
 </tbody>
 </table>
 <p>The door's speed multiplier and the <code>speed.*</code> settings do not affect windmills. <strong>Blocks to move</strong> does not apply.</p>
-<p>Config key <code>types.windmill.degrees-per-second</code> sets the speed of windmills that have no own value.</p>
+<p>Config key <code>types.windmill.degrees-per-second</code> sets the speed of windmills that have no own value. After changing it,
+<code>/dp admin reload</code> applies it to running windmills too.</p>
 <h2 id="doors-types-windmill-on-the-move">On the move<a class="headerlink" href="#doors-types-windmill-on-the-move" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Checks when starting</strong>: every block must be allowed in a door (see <a href="#doors-movement-which-blocks-can-move">Blocks</a>)
@@ -6629,8 +6630,8 @@ The pole column itself (<code>d = 0</code>) does not move.</p>
 </tr>
 </tbody>
 </table>
-<p>A flag reads these values when it starts: after changing them and running <code>/dp admin reload</code>, stop and start the
-flag (or restart the server) to see the new wave. <strong>Blocks to move</strong> and the speed multiplier do not apply.</p>
+<p>After changing these values, run <code>/dp admin reload</code>: running flags take the new wave at once, without jumping.
+<strong>Blocks to move</strong> and the speed multiplier do not apply.</p>
 <h2 id="doors-types-flag-on-the-move">On the move<a class="headerlink" href="#doors-types-flag-on-the-move" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Checks when starting</strong>: every block must be allowed in a door (see <a href="#doors-movement-which-blocks-can-move">Blocks</a>)
@@ -6766,7 +6767,7 @@ click the second corner from the other side.</p>
 </tr>
 <tr>
 <td>Menu</td>
-<td><strong>Type settings</strong> → <strong>Time source</strong> (click to switch; the button shows <code>WORLD</code> or <code>REAL</code>)</td>
+<td><strong>Type settings</strong> → <strong>Time source</strong> (click to switch; the button shows <strong>World time</strong> or <strong>Real time</strong>)</td>
 </tr>
 <tr>
 <td>Values</td>
@@ -6778,7 +6779,7 @@ click the second corner from the other side.</p>
 </tr>
 <tr>
 <td>When</td>
-<td>Any time. A running clock keeps its source; the new one is used the next time it starts (or after a server restart)</td>
+<td>Any time. A running clock switches source at once: the hands move to the new time</td>
 </tr>
 </tbody>
 </table>
@@ -7264,7 +7265,7 @@ in <a href="#doors-movement-why-a-door-does-not-move">Why a door does not move</
 <tr>
 <td>10</td>
 <td>Free space</td>
-<td>A cell of the end position is not free, belongs to another door, or (rotating types) a cell the door sweeps through is not free. See <a href="#doors-movement-free-space">Free space</a></td>
+<td>A cell of the end position is not free or belongs to another door, or a cell the door passes through on the way is not free. See <a href="#doors-movement-free-space">Free space</a></td>
 </tr>
 <tr>
 <td>11</td>
@@ -7319,10 +7320,11 @@ classes:</p>
 </ul>
 <p>Door+ also refuses to move a door into a cell that belongs to <strong>another door</strong>, whether that door is standing still
 or moving there at the same moment.</p>
-<p><strong>Swept volume</strong>: the big door, drawbridge, folding door and revolving door turn, so their blocks pass through cells
-outside both the start and end positions (a quarter circle). With <code>movement.check-swept-volume: true</code> (default) those
-cells must be free too. The types that slide (portcullis, sliding door, split door, platform) are checked only at the
-end position: the cells between start and end are not checked.</p>
+<p><strong>Path</strong>: while moving, blocks pass through cells that belong to neither the start nor the end position: the quarter
+circle of a big door, drawbridge, folding door or revolving door, the gap crossed by a portcullis, sliding door or
+split door that moves farther than its own size, the shaft between two platform stops, the diagonal path of split
+door quadrants. With <code>movement.check-swept-volume: true</code> (default) every one of those cells must be free too
+(replaceable or passable). Set it to <code>false</code> to check only the end position.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When you create a door whose end position is blocked, Door+ still creates it and warns: <strong>Warning: the
@@ -7676,7 +7678,10 @@ blocks on top of each other. Entities riding something are not moved.</p>
 <li><strong>Animated or resting</strong>: an active door is animated only while its chunks are loaded and a player is within
   <code>animation.viewer-range</code> blocks. Otherwise it <em>rests</em>: its blocks are in the world in their built position. Door+
   checks every <code>perpetual.check-interval-ticks</code> (default 20, allowed 1 to 1200) and switches between the two. The
-  position depends only on the time since it was started, so it looks continuous when you come back.</li>
+  position follows the time since it was started, so it looks continuous when you come back.</li>
+<li><strong>Changing settings while active</strong>: the windmill speed, the clock time source (<code>/dp set</code> or <strong>Type settings</strong>) and
+  the <code>types.flag.*</code> / <code>types.windmill.degrees-per-second</code> keys (after <code>/dp admin reload</code>) apply to a running door at
+  once, continuing from its current position.</li>
 <li><strong>Animation limits</strong>: a door that would pass <code>animation.max-animated-blocks</code> or
   <code>animation.max-global-animated-blocks</code> keeps resting.</li>
 <li><strong>Changes while resting</strong>: if someone changes the blocks of a resting door, the saved copy is updated the next time
@@ -7780,7 +7785,7 @@ blocks on top of each other. Entities riding something are not moved.</p>
 <tr>
 <td><code>/dp admin reload</code></td>
 <td><code>doorplus.admin.reload</code></td>
-<td>Reloads <code>config.yml</code> (except <code>storage</code>) and the language files</td>
+<td>Reloads <code>config.yml</code> (except <code>storage</code> and <code>integrations</code>, which need a restart) and the language files</td>
 <td><strong>Configuration and language files reloaded.</strong></td>
 </tr>
 </tbody>
@@ -7859,7 +7864,7 @@ page.</p>
 </tr>
 <tr>
 <td><strong>... cannot move: something is in the way at x, y, z.</strong></td>
-<td>That cell of the end position (or of the swept area) is not free, or belongs to another door</td>
+<td>That cell of the end position, or of the path the door travels, is not free, or belongs to another door</td>
 <td>Remove the block, move the other door, or change the direction</td>
 </tr>
 <tr>
@@ -8571,7 +8576,7 @@ of each type are listed in <a href="#doors-editing-type-settings">Editing and de
 </tr>
 <tr>
 <td>A group</td>
-<td>Left click: opens the group menu (if you can manage it). Right click: removes the door from the group.</td>
+<td>Left click: opens the group menu (if you can manage it). Right click: removes the door from the group (group owner or door owner only).</td>
 </tr>
 </tbody>
 </table></section></section>
@@ -9995,7 +10000,9 @@ reached your limit.</strong> <code>doorplus.admin.bypass.limits</code> ignores i
 <strong>Door <code>&lt;door&gt;</code> removed from group <code>&lt;group&gt;</code>.</strong></p>
 </div>
 <div class="tabbed-block">
-<p>In <strong>Groups of <code>&lt;door&gt;</code></strong>, right click the group.</p>
+<p>In <strong>Groups of <code>&lt;door&gt;</code></strong>, right click the group. Only the group owner or the <strong>owner</strong> of the door can do
+this; anyone else gets <strong>Only the owner of the group <code>&lt;group&gt;</code> or the owner of the door can remove it from the
+group.</strong></p>
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#access-groups-__codelineno-2-1"></a>/dp group remove &lt;group&gt; &lt;door&gt;
@@ -10005,8 +10012,8 @@ reached your limit.</strong> <code>doorplus.admin.bypass.limits</code> ignores i
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In the door menu <strong>Groups</strong>, any admin or owner of the door can remove it from a group, even from a group
-owned by someone else. In the group menu and with the command, only the group owner can.</p>
+<p>In the group menu and with the command, only the group owner can remove doors. The owner of a door can also
+take it out of someone else's group from the door menu <strong>Groups</strong>.</p>
 </div>
 <h2 id="access-groups-operate-a-group">Operate a group<a class="headerlink" href="#access-groups-operate-a-group" title="Permanent link">&para;</a></h2>
 <table>
@@ -12155,7 +12162,7 @@ owner and the doors of a group.</p>
 <td><code>types.windmill.degrees-per-second</code></td>
 <td>decimal</td>
 <td><code>30.0</code></td>
-<td><code>1</code> to <code>3600</code></td>
+<td><code>1</code> to <code>360</code></td>
 <td>Rotation speed of windmills that have no own speed set (<code>/dp set &lt;door&gt; degrees-per-second</code>).</td>
 </tr>
 <tr>
@@ -13779,8 +13786,10 @@ centre of the door (closed position) gets the <strong>User</strong> role on that
 not active on this server.</strong></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Door+ does not warn you when the door is <strong>Private</strong>. Make it Restricted with <code>/dp privacy &lt;door&gt; restricted</code>,
-otherwise region members still cannot use it. See <a href="#access-privacy-and-roles">Privacy and roles</a>.</p>
+<p>Region access works only on <strong>Restricted</strong> doors. When the door is <strong>Private</strong>, the region access button shows
+<strong>The door is PRIVATE: set it to RESTRICTED for region access to work.</strong>, and switching region access on (or
+making such a door Private) by command shows <strong><code>&lt;door&gt;</code> is PRIVATE: region members can open it only when it is
+RESTRICTED (/door privacy <code>&lt;door&gt;</code> restricted).</strong> See <a href="#access-privacy-and-roles">Privacy and roles</a>.</p>
 </div>
 <h2 id="integrations-worldguard-troubleshooting">Troubleshooting<a class="headerlink" href="#integrations-worldguard-troubleshooting" title="Permanent link">&para;</a></h2>
 <p>At startup the console shows which features are on, for example:</p>
@@ -13958,8 +13967,13 @@ moment.</strong> Wait for the console line, then link again.</p>
 <p>You see <strong>Linked Furniture trigger #&lt;id&gt; to &lt;door&gt;.</strong></p>
 <div class="admonition note">
 <p class="admonition-title">ItemsAdder complex furniture</p>
-<p>ItemsAdder does not let other plugins identify complex (multi-block) furniture once it is placed, so Door+
-cannot link it: you see <strong>This object is not recognised yet. Try again in a moment.</strong> Simple furniture works.</p>
+<p>Complex (multi-entity) furniture works like simple furniture. Door+ stores the id of its custom entity, which
+can differ from the id of the furniture item: <code>/dp trigger inspect</code> shows the stored id.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Oraxen shaped blocks</p>
+<p>Custom stairs, slabs, doors and trapdoors of Oraxen work as custom blocks. A two-block door counts only on the
+half you linked.</p>
 </div>
 <h2 id="integrations-custom-blocks-how-these-triggers-behave">How these triggers behave<a class="headerlink" href="#integrations-custom-blocks-how-these-triggers-behave" title="Permanent link">&para;</a></h2>
 <ul>
@@ -16092,7 +16106,7 @@ restart; <code>/dp admin reload</code> only logs <code>Changes to the 'storage' 
 </tr>
 <tr>
 <td><strong>&lt;door&gt; cannot move: something is in the way at &lt;x&gt;, &lt;y&gt;, &lt;z&gt;.</strong></td>
-<td>A block, or another door, is in the destination or, for rotating doors, in the arc the door sweeps (<code>movement.check-swept-volume</code>)</td>
+<td>A block, or another door, is in the destination or on the path the door travels (<code>movement.check-swept-volume</code>)</td>
 <td>Clear that block. Blocks in <code>blocks.replaceable</code> (water, grass, snow, ...) and <code>blocks.passable</code> (barrier, light, structure void) never block a door</td>
 </tr>
 <tr>

@@ -2835,7 +2835,7 @@ in <a href="#why-a-door-does-not-move">Why a door does not move</a>.</p>
 <tr>
 <td>10</td>
 <td>Free space</td>
-<td>A cell of the end position is not free, belongs to another door, or (rotating types) a cell the door sweeps through is not free. See <a href="#free-space">Free space</a></td>
+<td>A cell of the end position is not free or belongs to another door, or a cell the door passes through on the way is not free. See <a href="#free-space">Free space</a></td>
 </tr>
 <tr>
 <td>11</td>
@@ -2890,10 +2890,11 @@ classes:</p>
 </ul>
 <p>Door+ also refuses to move a door into a cell that belongs to <strong>another door</strong>, whether that door is standing still
 or moving there at the same moment.</p>
-<p><strong>Swept volume</strong>: the big door, drawbridge, folding door and revolving door turn, so their blocks pass through cells
-outside both the start and end positions (a quarter circle). With <code>movement.check-swept-volume: true</code> (default) those
-cells must be free too. The types that slide (portcullis, sliding door, split door, platform) are checked only at the
-end position: the cells between start and end are not checked.</p>
+<p><strong>Path</strong>: while moving, blocks pass through cells that belong to neither the start nor the end position: the quarter
+circle of a big door, drawbridge, folding door or revolving door, the gap crossed by a portcullis, sliding door or
+split door that moves farther than its own size, the shaft between two platform stops, the diagonal path of split
+door quadrants. With <code>movement.check-swept-volume: true</code> (default) every one of those cells must be free too
+(replaceable or passable). Set it to <code>false</code> to check only the end position.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When you create a door whose end position is blocked, Door+ still creates it and warns: <strong>Warning: the
@@ -3247,7 +3248,10 @@ blocks on top of each other. Entities riding something are not moved.</p>
 <li><strong>Animated or resting</strong>: an active door is animated only while its chunks are loaded and a player is within
   <code>animation.viewer-range</code> blocks. Otherwise it <em>rests</em>: its blocks are in the world in their built position. Door+
   checks every <code>perpetual.check-interval-ticks</code> (default 20, allowed 1 to 1200) and switches between the two. The
-  position depends only on the time since it was started, so it looks continuous when you come back.</li>
+  position follows the time since it was started, so it looks continuous when you come back.</li>
+<li><strong>Changing settings while active</strong>: the windmill speed, the clock time source (<code>/dp set</code> or <strong>Type settings</strong>) and
+  the <code>types.flag.*</code> / <code>types.windmill.degrees-per-second</code> keys (after <code>/dp admin reload</code>) apply to a running door at
+  once, continuing from its current position.</li>
 <li><strong>Animation limits</strong>: a door that would pass <code>animation.max-animated-blocks</code> or
   <code>animation.max-global-animated-blocks</code> keeps resting.</li>
 <li><strong>Changes while resting</strong>: if someone changes the blocks of a resting door, the saved copy is updated the next time
@@ -3351,7 +3355,7 @@ blocks on top of each other. Entities riding something are not moved.</p>
 <tr>
 <td><code>/dp admin reload</code></td>
 <td><code>doorplus.admin.reload</code></td>
-<td>Reloads <code>config.yml</code> (except <code>storage</code>) and the language files</td>
+<td>Reloads <code>config.yml</code> (except <code>storage</code> and <code>integrations</code>, which need a restart) and the language files</td>
 <td><strong>Configuration and language files reloaded.</strong></td>
 </tr>
 </tbody>
@@ -3430,7 +3434,7 @@ page.</p>
 </tr>
 <tr>
 <td><strong>... cannot move: something is in the way at x, y, z.</strong></td>
-<td>That cell of the end position (or of the swept area) is not free, or belongs to another door</td>
+<td>That cell of the end position, or of the path the door travels, is not free, or belongs to another door</td>
 <td>Remove the block, move the other door, or change the direction</td>
 </tr>
 <tr>

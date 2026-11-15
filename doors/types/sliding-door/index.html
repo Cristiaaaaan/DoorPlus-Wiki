@@ -2663,8 +2663,8 @@ closed and not moving.</p>
 <ul>
 <li><strong>Speed</strong>: <code>distance / (speed.blocks-per-second × speed multiplier)</code> seconds. 3 blocks at the default 2 blocks per
   second take 1.5 seconds.</li>
-<li><strong>Checks</strong>: only the end position is checked. If <code>blocks-to-move</code> is larger than the door's width, the cells between
-  the doorway and the end position are not checked.</li>
+<li><strong>Checks</strong>: the end position and, if <code>blocks-to-move</code> is larger than the door's width, the cells between the
+  doorway and the end position (see <a href="../../movement/#free-space">Free space</a>).</li>
 <li><strong>Entities</strong>: see <a href="../../movement/#collisions">Collisions</a>.</li>
 </ul>
 <h2 id="sounds">Sounds<a class="headerlink" href="#sounds" title="Permanent link">&para;</a></h2>

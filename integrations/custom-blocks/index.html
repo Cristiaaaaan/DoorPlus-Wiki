@@ -2614,8 +2614,13 @@ moment.</strong> Wait for the console line, then link again.</p>
 <p>You see <strong>Linked Furniture trigger #&lt;id&gt; to &lt;door&gt;.</strong></p>
 <div class="admonition note">
 <p class="admonition-title">ItemsAdder complex furniture</p>
-<p>ItemsAdder does not let other plugins identify complex (multi-block) furniture once it is placed, so Door+
-cannot link it: you see <strong>This object is not recognised yet. Try again in a moment.</strong> Simple furniture works.</p>
+<p>Complex (multi-entity) furniture works like simple furniture. Door+ stores the id of its custom entity, which
+can differ from the id of the furniture item: <code>/dp trigger inspect</code> shows the stored id.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Oraxen shaped blocks</p>
+<p>Custom stairs, slabs, doors and trapdoors of Oraxen work as custom blocks. A two-block door counts only on the
+half you linked.</p>
 </div>
 <h2 id="how-these-triggers-behave">How these triggers behave<a class="headerlink" href="#how-these-triggers-behave" title="Permanent link">&para;</a></h2>
 <ul>
