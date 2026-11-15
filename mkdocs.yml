@@ -1,0 +1,145 @@
+site_name: Door+ Wiki
+site_url: https://cristiaaaaan.github.io/DoorPlus-Wiki/
+site_description: Documentation of Door+, big animated doors for Paper.
+site_author: Cristiaaaaan
+repo_url: https://github.com/Cristiaaaaan/DoorPlus-Wiki
+repo_name: DoorPlus-Wiki
+edit_uri: ""
+copyright: Copyright &copy; 2026 Cristiaaaaan
+
+theme:
+  name: material
+  language: en
+  logo: assets/icon-512.png
+  favicon: assets/icon-512.png
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - print-site:
+      add_to_navigation: false
+      add_cover_page: true
+      cover_page_template: overrides/print_cover.tpl
+      add_table_of_contents: true
+      toc_title: Contents
+      enumerate_headings: false
+      add_full_urls: false
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+  links:
+    not_found: warn
+    anchors: warn
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Installation: getting-started/installation.md
+      - Your first door: getting-started/first-door.md
+      - Coming from BigDoors: getting-started/bigdoors-import.md
+  - Doors:
+      - Creating a door: doors/creating.md
+      - Door types:
+          - doors/types/index.md
+          - Big door: doors/types/big-door.md
+          - Drawbridge: doors/types/drawbridge.md
+          - Portcullis: doors/types/portcullis.md
+          - Sliding door: doors/types/sliding-door.md
+          - Garage door: doors/types/garage-door.md
+          - Split door: doors/types/split-door.md
+          - Folding door: doors/types/folding-door.md
+          - Rolling shutter: doors/types/rolling-shutter.md
+          - Platform / elevator: doors/types/platform.md
+          - Revolving door: doors/types/revolving-door.md
+          - Windmill: doors/types/windmill.md
+          - Flag: doors/types/flag.md
+          - Clock: doors/types/clock.md
+      - Editing and deleting: doors/editing.md
+      - Movement and animation: doors/movement.md
+      - Menus: doors/menus.md
+  - Access and triggers:
+      - Privacy and roles: access/privacy-and-roles.md
+      - Triggers: access/triggers.md
+      - Keys: access/keys.md
+      - Door groups: access/groups.md
+  - Reference:
+      - Commands: reference/commands.md
+      - Permissions: reference/permissions.md
+      - Limits: reference/limits.md
+      - Configuration: reference/configuration.md
+      - Language files: reference/language.md
+      - Storage: reference/storage.md
+      - Placeholders: reference/placeholders.md
+  - Integrations:
+      - integrations/index.md
+      - LuckPerms: integrations/luckperms.md
+      - WorldGuard: integrations/worldguard.md
+      - PlaceholderAPI: integrations/placeholderapi.md
+      - Custom blocks and furniture: integrations/custom-blocks.md
+      - NPCs: integrations/npcs.md
+  - Developers:
+      - Developer API: developers/api.md
+      - Events: developers/events.md
+      - Extension points: developers/extensions.md
+  - Help:
+      - FAQ: help/faq.md
+      - Troubleshooting: help/troubleshooting.md
+      - Licence, verification and privacy: help/licence-and-privacy.md
+      - Changelog: help/changelog.md
