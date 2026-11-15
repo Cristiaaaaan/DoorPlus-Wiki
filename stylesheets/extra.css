@@ -1,0 +1,62 @@
+/* Door+ brand: night blue background, amber accent (same palette as the store graphics). */
+:root {
+  --dp-amber: #ffb020;
+  --dp-amber-dark: #cc8000;
+  --dp-night: #0c101e;
+}
+
+[data-md-color-primary="custom"] {
+  --md-primary-fg-color: var(--dp-night);
+  --md-primary-fg-color--light: #161c30;
+  --md-primary-fg-color--dark: #080b14;
+  --md-primary-bg-color: #f1f5f9;
+  --md-primary-bg-color--light: #94a3b8;
+}
+
+[data-md-color-accent="custom"] {
+  --md-accent-fg-color: var(--dp-amber-dark);
+  --md-accent-fg-color--transparent: rgba(255, 176, 32, 0.12);
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0f1424;
+  --md-default-bg-color--light: #161c30;
+  --md-code-bg-color: #161c30;
+  --md-typeset-a-color: var(--dp-amber);
+}
+
+[data-md-color-scheme="slate"][data-md-color-accent="custom"] {
+  --md-accent-fg-color: var(--dp-amber);
+}
+
+[data-md-color-scheme="default"] {
+  --md-typeset-a-color: #b36b00;
+}
+
+/* Keep wide reference tables readable. */
+.md-typeset table:not([class]) {
+  font-size: 0.72rem;
+}
+
+.md-typeset table:not([class]) th {
+  white-space: nowrap;
+}
+
+/* Banner on the home page. */
+.dp-banner {
+  width: 100%;
+  border-radius: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+/* PDF export: white page and margins whatever the theme of the browser. */
+@media print {
+  @page {
+    background: #fff;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+}

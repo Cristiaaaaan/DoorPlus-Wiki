@@ -1,0 +1,3667 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation of Door+, big animated doors for Paper.">
+      
+      
+        <meta name="author" content="Cristiaaaaan">
+      
+      
+        <link rel="canonical" href="https://cristiaaaaan.github.io/DoorPlus-Wiki/access/triggers/">
+      
+      
+        <link rel="prev" href="../privacy-and-roles/">
+      
+      
+        <link rel="next" href="../keys/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/icon-512.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Triggers - Door+ Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#triggers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Door+ Wiki" class="md-header__button md-logo" aria-label="Door+ Wiki" data-md-component="logo">
+      
+  <img src="../../assets/icon-512.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Door+ Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Triggers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Cristiaaaaan/DoorPlus-Wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    DoorPlus-Wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/installation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../doors/creating/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Doors
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../privacy-and-roles/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Access and triggers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/commands/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../integrations/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Integrations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developers/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Developers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../help/faq/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Help
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Door+ Wiki" class="md-nav__button md-logo" aria-label="Door+ Wiki" data-md-component="logo">
+      
+  <img src="../../assets/icon-512.png" alt="logo">
+
+    </a>
+    Door+ Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Cristiaaaaan/DoorPlus-Wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    DoorPlus-Wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your first door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/bigdoors-import/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coming from BigDoors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doors
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Doors
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/creating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating a door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../doors/types/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Door types
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Door types
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/types/big-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Big door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/types/drawbridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drawbridge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/types/portcullis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portcullis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/types/sliding-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sliding door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/types/garage-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Garage door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/types/split-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Split door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/types/folding-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Folding door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/types/rolling-shutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rolling shutter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/types/platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform / elevator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/types/revolving-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Revolving door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/types/windmill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windmill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/types/flag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flag
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/types/clock/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clock
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/editing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editing and deleting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/movement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Movement and animation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../doors/menus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Menus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Access and triggers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Access and triggers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../privacy-and-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Privacy and roles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Triggers
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Triggers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigger-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trigger types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Block
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redstone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redstone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-block-and-furniture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom block and furniture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NPC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proximity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proximity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#follow-state-in-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Follow state in detail
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-a-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Link a trigger
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Link a trigger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link-a-proximity-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Link a proximity zone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checks-when-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checks when linking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigger-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trigger settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#own-entries-restricted-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Own entries (Restricted triggers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List triggers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspect-a-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspect a source
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-a-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove a trigger
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triggers-on-a-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Triggers on a group
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Door groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Language files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/placeholders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Placeholders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../integrations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrations
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Integrations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/luckperms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LuckPerms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/worldguard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WorldGuard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/placeholderapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PlaceholderAPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/custom-blocks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom blocks and furniture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/npcs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NPCs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extension points
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/licence-and-privacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licence, verification and privacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigger-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trigger types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Block
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redstone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redstone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-block-and-furniture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom block and furniture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NPC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proximity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proximity
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#follow-state-in-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Follow state in detail
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-a-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Link a trigger
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Link a trigger">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#link-a-proximity-zone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Link a proximity zone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#checks-when-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checks when linking
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trigger-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trigger settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trigger settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#access-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#own-entries-restricted-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Own entries (Restricted triggers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List triggers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspect-a-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspect a source
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-a-trigger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remove a trigger
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#triggers-on-a-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Triggers on a group
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limits
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="triggers">Triggers<a class="headerlink" href="#triggers" title="Permanent link">&para;</a></h1>
+<p>A trigger links a <strong>source</strong> in the world (a button, any block, a redstone line, an entity, a custom block,
+an NPC or a zone) to a <strong>target</strong>: one door or one <a href="../groups/">door group</a>. This page lists every trigger
+type, how to link and edit triggers, and exactly what each setting does. It is for door owners, door
+admins and staff.</p>
+<h2 id="basics">Basics<a class="headerlink" href="#basics" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A door can have many triggers, and one source can control many targets (one trigger per target).</li>
+<li>Each trigger has its own action, access mode, cooldown and other settings.</li>
+<li>Managing the triggers of a door requires the role <strong>Admin</strong> or <strong>Owner</strong> on it (see
+  <a href="../privacy-and-roles/">Privacy and roles</a>). Triggers of a group are managed by the group owner.</li>
+<li>Linking a trigger of a type requires the permission <code>doorplus.trigger.&lt;type&gt;</code>.</li>
+<li>Every trigger has a number (id), shown as <code>#12</code>. Commands accept <code>12</code> or <code>#12</code>.</li>
+</ul>
+<h2 id="trigger-types">Trigger types<a class="headerlink" href="#trigger-types" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Menu name</th>
+<th>Source</th>
+<th>Activated by</th>
+<th>Permission</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Block</td>
+<td><strong>Block</strong></td>
+<td>Any placed vanilla block: button, lever, pressure plate, tripwire, but also a chest or a bookshelf</td>
+<td>Right click with the main hand; stepping on a pressure plate or tripwire</td>
+<td><code>doorplus.trigger.block</code></td>
+</tr>
+<tr>
+<td>Redstone</td>
+<td><strong>Redstone</strong></td>
+<td>Any block position that receives redstone power</td>
+<td>Redstone power turning on (and off, with <strong>Follow state</strong>)</td>
+<td><code>doorplus.trigger.redstone</code></td>
+</tr>
+<tr>
+<td>Entity</td>
+<td><strong>Entity</strong></td>
+<td>A vanilla entity of a type in <code>triggers.entity.allowed-types</code></td>
+<td>Right click on the entity</td>
+<td><code>doorplus.trigger.entity</code></td>
+</tr>
+<tr>
+<td>Custom block</td>
+<td><strong>Custom block</strong></td>
+<td>A placed custom block of ItemsAdder, Nexo, Oraxen or CraftEngine</td>
+<td>Clicking it</td>
+<td><code>doorplus.trigger.custom_block</code></td>
+</tr>
+<tr>
+<td>Furniture</td>
+<td><strong>Furniture</strong></td>
+<td>A placed furniture of ItemsAdder, Nexo, Oraxen or CraftEngine</td>
+<td>Clicking it</td>
+<td><code>doorplus.trigger.furniture</code></td>
+</tr>
+<tr>
+<td>NPC</td>
+<td><strong>NPC</strong></td>
+<td>A Citizens or FancyNpcs NPC</td>
+<td>Clicking it</td>
+<td><code>doorplus.trigger.npc</code></td>
+</tr>
+<tr>
+<td>Proximity</td>
+<td><strong>Proximity</strong></td>
+<td>A spherical zone (centre and radius)</td>
+<td>An allowed player entering the zone</td>
+<td><code>doorplus.trigger.proximity</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>doorplus.trigger.*</code> gives all of them and is included in <code>doorplus.user</code>, which every player has by
+default. Custom blocks, furniture and NPCs need the matching plugin: see
+<a href="../../integrations/custom-blocks/">Custom blocks and furniture</a> and <a href="../../integrations/npcs/">NPCs</a>.</p>
+<h3 id="block">Block<a class="headerlink" href="#block" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Right click with the main hand activates the trigger. Pressure plates and tripwires activate when
+  pressed (once per press, not every tick while you stand on them).</li>
+<li>The click is ignored if you are sneaking while holding an item (so you can place blocks against the
+  source), if you hold the creation stick, or if you are creating a door or selecting a trigger.</li>
+<li><strong>Follow state</strong> is available only for blocks that can be powered (buttons, levers, pressure plates,
+  tripwires, and other blocks with a powered state). The trigger is active while the block is powered.</li>
+<li>With <strong>Follow state</strong>, only a power change started by a player counts: a pressure plate pressed by a
+  mob, an armor stand or a dropped item does not open the door. When the player steps off, the door
+  follows the plate back.</li>
+<li>The trigger is bound to the position. It stays if the block is broken or replaced.</li>
+</ul>
+<h3 id="redstone">Redstone<a class="headerlink" href="#redstone" title="Permanent link">&para;</a></h3>
+<ul>
+<li>"Powered" means the block at the trigger position is powered directly or indirectly. Door+ checks the
+  position and its six neighbours one tick after each redstone change, block placement or block break.</li>
+<li><strong>Toggle</strong>, <strong>Open</strong> and <strong>Close</strong> run when the power turns on. <strong>Follow state</strong> opens when the power
+  turns on and closes when it turns off.</li>
+<li>It works only if the door has <strong>Redstone</strong> on (door menu <strong>Redstone</strong>, or
+  <code>/dp set &lt;door&gt; redstone true</code>) and <code>triggers.redstone.enabled</code> is <code>true</code> in the config. Linking a
+  redstone trigger to a door with <strong>Redstone</strong> off shows a warning:
+  <strong>Redstone is disabled on <code>&lt;door&gt;</code>: enable "Allow redstone" in its settings for this trigger to work.</strong></li>
+<li>When a chunk loads, Door+ reads the current power without moving any door.</li>
+<li>Redstone triggers have no player, so they have no access mode and no own entries.</li>
+<li>The trigger is bound to the position. It stays if the block changes.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Whoever can reach the circuit can open a door with <strong>Redstone</strong> on. Keep the wiring protected.</p>
+</div>
+<h3 id="entity">Entity<a class="headerlink" href="#entity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Allowed entity types come from <code>triggers.entity.allowed-types</code> (default <code>ITEM_FRAME</code>,
+  <code>GLOW_ITEM_FRAME</code>, <code>ARMOR_STAND</code>, <code>INTERACTION</code>, <code>PAINTING</code>). Players can never be used. Another type
+  gives <strong>This kind of entity cannot be used as a trigger.</strong></li>
+<li>The trigger is removed when the entity dies, breaks or is removed from the world (not when its chunk
+  unloads).</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Display entities have no hitbox. To use one as a button, place an <code>INTERACTION</code> entity on it and
+link that.</p>
+</div>
+<h3 id="custom-block-and-furniture">Custom block and furniture<a class="headerlink" href="#custom-block-and-furniture" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Door+ listens to the click events of the custom content plugin.</li>
+<li>In selection mode, clicking a block that a custom content plugin recognises links a <strong>Custom block</strong>;
+  clicking an entity it recognises links a <strong>Furniture</strong>.</li>
+<li>If the plugin recreates a furniture with a new entity, Door+ finds it again by its id and position.</li>
+<li>If the object at that position has a different id when clicked, the trigger is removed. It is also
+  removed when the object is broken.</li>
+</ul>
+<h3 id="npc">NPC<a class="headerlink" href="#npc" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Works with Citizens and FancyNpcs. The trigger is bound to the NPC id and is removed when the NPC is
+  deleted.</li>
+</ul>
+<h3 id="proximity">Proximity<a class="headerlink" href="#proximity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The zone is a sphere. The radius goes from <code>1</code> to <code>limits.max-proximity-radius</code> (default <code>16</code>).</li>
+<li>The centre is either the centre of the door (for a group: of its doors) or your position when you create
+  the trigger.</li>
+<li>Every <code>triggers.proximity.check-interval-ticks</code> ticks (default <code>10</code>) Door+ looks for players inside the
+  zones in loaded chunks.</li>
+<li>Only players who are allowed to use the door count (full check, see
+  <a href="../privacy-and-roles/#how-a-use-is-decided">How a use is decided</a>). Spectators never count. With
+  <code>triggers.proximity.ignore-vanished: true</code> (default) vanished players do not count either. Players who
+  are not allowed receive no message.</li>
+<li><strong>Follow state</strong> (default for proximity): the door opens when the first allowed player enters and
+  closes <strong>Exit delay</strong> ticks after the last one leaves.</li>
+<li><strong>Toggle</strong>, <strong>Open</strong> and <strong>Close</strong>: run when the first allowed player enters an empty zone.</li>
+</ul>
+<h2 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Menu name</th>
+<th>Effect</th>
+<th>Available for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TOGGLE</code></td>
+<td><strong>Toggle</strong></td>
+<td>Opens a closed door, closes an open door.</td>
+<td>Every source</td>
+</tr>
+<tr>
+<td><code>OPEN</code></td>
+<td><strong>Open</strong></td>
+<td>Moves the door to open. Nothing happens if it is already open.</td>
+<td>Every source</td>
+</tr>
+<tr>
+<td><code>CLOSE</code></td>
+<td><strong>Close</strong></td>
+<td>Moves the door to closed. Nothing happens if it is already closed.</td>
+<td>Every source</td>
+</tr>
+<tr>
+<td><code>FOLLOW</code></td>
+<td><strong>Follow state</strong></td>
+<td>Source active = open, source inactive = closed.</td>
+<td>Redstone, Proximity, Block on a block that can be powered</td>
+</tr>
+<tr>
+<td><code>GOTO</code></td>
+<td><strong>Go to stop</strong></td>
+<td>Moves a platform to the stop given by <strong>arg</strong>.</td>
+<td>Targets with at least one platform</td>
+</tr>
+</tbody>
+</table>
+<p>Default action when you link a trigger without choosing one: <strong>Follow state</strong> for Redstone and Proximity,
+<strong>Toggle</strong> for every other type.</p>
+<p>How each door type reacts to the actions is described in <a href="../../doors/movement/">Movement</a>.</p>
+<h3 id="follow-state-in-detail">Follow state in detail<a class="headerlink" href="#follow-state-in-detail" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A door with several <strong>Follow state</strong> sources (on the door itself or on its groups) stays open while
+  <strong>at least one</strong> of them is active. It closes when the last one turns off.</li>
+<li>While a source is active, the door's auto-close does not run. Auto-close starts again after the last
+  source turns off.</li>
+<li>If the door is still moving when a source changes, Door+ checks again at the end of the movement and
+  moves the door to match the sources.</li>
+<li>Redstone sources only count for doors with <strong>Redstone</strong> on.</li>
+<li>With pressure plates, entities other than players are ignored (see <a href="#block">Block</a>).</li>
+</ul>
+<h2 id="link-a-trigger">Link a trigger<a class="headerlink" href="#link-a-trigger" title="Permanent link">&para;</a></h2>
+<p>When you start linking, Door+ enters <strong>selection mode</strong>:</p>
+<ul>
+<li>Your inventory closes and chat tells you what to click and how many seconds you have
+  (<code>triggers.selection-timeout-seconds</code>, default <code>30</code>).</li>
+<li>Left or right click the source. The click does not do anything else (a chest does not open, a lever does
+  not flip).</li>
+<li>After a successful link the source shows green particles for 5 seconds and chat offers
+  <strong>[Add another]</strong> and <strong>[Done]</strong>. <strong>[Add another]</strong> lets you click one more source for the same target.</li>
+<li>If linking fails, chat explains why and you can click another source.</li>
+<li>Type <code>/dp cancel</code> to stop. If you do nothing until the time runs out: <strong>Selection timed out.</strong> The timer
+  restarts after each link.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Menu</label><label for="__tabbed_1_2">Command</label><label for="__tabbed_1_3">During creation</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Open the door menu with <code>/dp menu &lt;door&gt;</code> (or the group menu, see <a href="../groups/">Groups</a>).</li>
+<li>Click <strong>Triggers</strong>. The menu <strong>Triggers — <code>&lt;door&gt;</code></strong> lists the current triggers.</li>
+<li>Click <strong>Add trigger</strong>. The menu <strong>New trigger — <code>&lt;door&gt;</code></strong> opens.</li>
+<li>Choose the source:<ul>
+<li><strong>Block</strong>: a block, button, lever, plate or custom block. Requires <code>doorplus.trigger.block</code> or
+  <code>doorplus.trigger.custom_block</code>.</li>
+<li><strong>Redstone</strong>: a block that receives redstone power.</li>
+<li><strong>Entity</strong>: an entity, a furniture or an NPC. Requires <code>doorplus.trigger.entity</code>,
+  <code>doorplus.trigger.furniture</code> or <code>doorplus.trigger.npc</code>.</li>
+<li><strong>Proximity</strong>: a zone, see <a href="#link-a-proximity-zone">Link a proximity zone</a>.</li>
+</ul>
+</li>
+<li>Click the source in the world. Chat confirms:
+   <strong>Linked <code>&lt;type&gt;</code> trigger #<code>&lt;id&gt;</code> to <code>&lt;door&gt;</code>.</strong></li>
+<li>Click <strong>[Done]</strong>. The trigger list opens again.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>/dp trigger add &lt;door|group:group&gt; &lt;block|redstone|entity|proximity&gt; [action] [radius]
+</code></pre></div>
+<ul>
+<li><code>block</code> also accepts custom blocks, <code>entity</code> also accepts furniture and NPCs. The command needs the
+  permission of the word you type (<code>doorplus.trigger.block</code>, ...); the source you click then needs the
+  permission of its real type (for example <code>doorplus.trigger.custom_block</code>).</li>
+<li><code>[action]</code> is <code>toggle</code>, <code>open</code>, <code>close</code>, <code>follow</code> or <code>goto</code>. Without it the default action is used.</li>
+<li><code>[radius]</code> is only for <code>proximity</code>.</li>
+</ul>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/dp trigger add castle block
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>/dp trigger add castle redstone follow
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>/dp trigger add group:gates block open
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<p>The guided creation has a trigger step: <strong>Add triggers to open the door (optional).</strong></p>
+<ol>
+<li>Click <strong>[Add trigger]</strong>.</li>
+<li>Click <strong>[Block]</strong>, <strong>[Redstone]</strong>, <strong>[Entity]</strong> or <strong>[Proximity]</strong>.</li>
+<li>Click the source. Chat confirms: <strong>Captured <code>&lt;type&gt;</code> at <code>&lt;x&gt;, &lt;y&gt;, &lt;z&gt;</code>. It will be linked when the
+   door is created.</strong> For <strong>[Proximity]</strong>, type the radius in chat, then click <strong>[Door centre]</strong> or
+   <strong>[My position]</strong>.</li>
+<li>Repeat for more sources, then click <strong>[Done]</strong>.</li>
+</ol>
+<p>When the door is saved, the sources are linked one by one with the same checks as below, and chat
+reports <strong>Triggers linked: <code>&lt;count&gt;</code>/<code>&lt;total&gt;</code>.</strong> Sources linked this way use <strong>Follow state</strong> for
+Redstone and Proximity and <strong>Toggle</strong> for the others. See <a href="../../doors/creating/">Creating doors</a>.</p>
+</div>
+</div>
+</div>
+<h3 id="link-a-proximity-zone">Link a proximity zone<a class="headerlink" href="#link-a-proximity-zone" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Start linking a <strong>Proximity</strong> trigger from the menu, or run
+   <code>/dp trigger add &lt;door&gt; proximity [action] [radius]</code>.</li>
+<li>If you did not give a valid radius, chat asks:
+   <strong>Type the radius of the zone in chat, from 1 to <code>&lt;max&gt;</code> blocks.</strong> Type a whole number.</li>
+<li>Chat shows <strong>Radius <code>&lt;radius&gt;</code>. Choose the centre of the zone:</strong> with two buttons.</li>
+<li>Click <strong>[Centre of the door]</strong> or <strong>[My position]</strong>. The trigger is linked.</li>
+</ol>
+<h3 id="checks-when-linking">Checks when linking<a class="headerlink" href="#checks-when-linking" title="Permanent link">&para;</a></h3>
+<p>Door+ checks these conditions in this order. The first one that fails stops the link with its message.</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Message when it fails</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>You have <code>doorplus.trigger.&lt;type&gt;</code> for the source type.</td>
+<td><strong>You do not have permission to link <code>&lt;type&gt;</code> triggers.</strong></td>
+</tr>
+<tr>
+<td>You are Admin or Owner of the door. For a group target: of every door of the group (an empty group: you are its owner).</td>
+<td><strong>You need at least the Admin role on <code>&lt;door&gt;</code> to manage its triggers.</strong></td>
+</tr>
+<tr>
+<td>The source is in the same world as the door.</td>
+<td><strong>The source must be in the same world as <code>&lt;door&gt;</code>.</strong></td>
+</tr>
+<tr>
+<td>The source is at most <code>limits.max-trigger-distance</code> blocks (default <code>64</code>, <code>0</code> = unlimited) from the door.</td>
+<td><strong>The source is too far from <code>&lt;door&gt;</code> ...</strong></td>
+</tr>
+<tr>
+<td>The target has fewer triggers than your limit.</td>
+<td><strong><code>&lt;door&gt;</code> already has the maximum number of triggers (<code>&lt;limit&gt;</code>).</strong></td>
+</tr>
+<tr>
+<td>The source is not a block of a door (it would move with it).</td>
+<td><strong>The source cannot be a block of a door: it would move with it.</strong></td>
+</tr>
+<tr>
+<td>The same source is not already linked to the same target with the same type.</td>
+<td><strong>This source is already linked to <code>&lt;door&gt;</code> with the same type.</strong></td>
+</tr>
+<tr>
+<td>An entity is of an allowed type.</td>
+<td><strong>This kind of entity cannot be used as a trigger.</strong></td>
+</tr>
+<tr>
+<td>The action is available for this source and target.</td>
+<td><strong>The action <code>&lt;action&gt;</code> is not available for this source and target.</strong></td>
+</tr>
+<tr>
+<td>A protection plugin (for example WorldGuard) lets you build there. Skipped with <code>doorplus.admin.bypass.protection</code>.</td>
+<td><strong>The protection <code>&lt;hook&gt;</code> does not allow you to link this source.</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The trigger limit is <code>limits.max-triggers-per-door</code> (default <code>16</code>) per door or group. It can be raised per
+player with <code>doorplus.limit.triggers.&lt;n&gt;</code> and ignored with <code>doorplus.admin.bypass.limits</code>. See
+<a href="../../reference/limits/">Limits</a>.</p>
+<h2 id="trigger-settings">Trigger settings<a class="headerlink" href="#trigger-settings" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Values</th>
+<th>Default</th>
+<th>Applies to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Action</strong> (<code>action</code>)</td>
+<td>See <a href="#actions">Actions</a></td>
+<td><strong>Follow state</strong> for Redstone and Proximity, <strong>Toggle</strong> otherwise</td>
+<td>All</td>
+</tr>
+<tr>
+<td><strong>Stop</strong> (<code>arg</code>)</td>
+<td>Stop number, from <code>0</code></td>
+<td><code>0</code></td>
+<td>Only with <strong>Go to stop</strong></td>
+</tr>
+<tr>
+<td><strong>Access</strong> (<code>access</code>)</td>
+<td><code>inherit</code>, <code>public</code>, <code>restricted</code>, <code>owner-only</code></td>
+<td><code>inherit</code> (<strong>Door privacy</strong>)</td>
+<td>All except Redstone</td>
+</tr>
+<tr>
+<td><strong>Cooldown</strong> (<code>cooldown</code>)</td>
+<td>Ticks (20 ticks = 1 second), <code>0</code> = none</td>
+<td><code>triggers.default-cooldown-ticks</code> (default <code>10</code>)</td>
+<td>All</td>
+</tr>
+<tr>
+<td><strong>Cancel vanilla interaction</strong> (<code>cancel-vanilla</code>)</td>
+<td><code>true</code>, <code>false</code></td>
+<td>See below</td>
+<td>Block, Entity, Custom block, Furniture, NPC</td>
+</tr>
+<tr>
+<td><strong>Enabled</strong> (<code>enabled</code>)</td>
+<td><code>true</code>, <code>false</code></td>
+<td><code>true</code></td>
+<td>All</td>
+</tr>
+<tr>
+<td><strong>Radius</strong> (<code>radius</code>)</td>
+<td><code>1</code> to <code>limits.max-proximity-radius</code></td>
+<td>Chosen when linking</td>
+<td>Proximity</td>
+</tr>
+<tr>
+<td><strong>Exit delay</strong> (<code>exit-delay</code>)</td>
+<td>Ticks, <code>0</code> = immediately</td>
+<td><code>20</code></td>
+<td>Proximity with <strong>Follow state</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Stop</strong>: for a door target, up to the last stop of the platform. For a group target, up to the highest
+  stop of its platforms (menu) or <code>limits.max-platform-stops</code> − 1 (command).</li>
+<li><strong>Cooldown</strong>: after a trigger fires, it ignores new activations for that many ticks. A <strong>Follow state</strong>
+  change that arrives during the cooldown is applied when the cooldown ends. The door also has its own
+  cooldown, <code>movement.toggle-cooldown-ticks</code>.</li>
+<li><strong>Cancel vanilla interaction</strong>: when on, the normal effect of the click is cancelled (a linked chest does
+  not open, an item frame does not rotate its item). Default: off for buttons, levers, pressure plates and
+  tripwires (they still click and animate), on for every other block, entities, custom blocks and
+  furniture, off for NPCs.</li>
+<li><strong>Enabled</strong>: a disabled trigger keeps its settings but does nothing.</li>
+</ul>
+<h3 id="access-mode">Access mode<a class="headerlink" href="#access-mode" title="Permanent link">&para;</a></h3>
+<p>The access mode replaces the door privacy for uses through this trigger only.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Menu name</th>
+<th>Who can use this trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>inherit</code></td>
+<td><strong>Door privacy</strong></td>
+<td>Follows the door privacy and access list.</td>
+</tr>
+<tr>
+<td><code>public</code></td>
+<td><strong>Public</strong></td>
+<td>Everyone, whatever the privacy and the key.</td>
+</tr>
+<tr>
+<td><code>restricted</code></td>
+<td><strong>Restricted</strong></td>
+<td>The owner, the admins and the trigger's own entries. Door Users who are not in the own entries are refused.</td>
+</tr>
+<tr>
+<td><code>owner-only</code></td>
+<td><strong>Owner and admins</strong></td>
+<td>Only the owner and the admins.</td>
+</tr>
+</tbody>
+</table>
+<p>The door key still applies to <strong>Door privacy</strong>, <strong>Restricted</strong> and <strong>Owner and admins</strong> (for example, with
+<strong>Key as alternative</strong> a key holder can use an <strong>Owner and admins</strong> trigger). The lock always applies. Full
+order of checks: <a href="../privacy-and-roles/#how-a-use-is-decided">How a use is decided</a>.</p>
+<p>For a group target, the access mode applies to each door of the group.</p>
+<h3 id="own-entries-restricted-triggers">Own entries (Restricted triggers)<a class="headerlink" href="#own-entries-restricted-triggers" title="Permanent link">&para;</a></h3>
+<p>A trigger with access <strong>Restricted</strong> has its own list of players, LuckPerms groups and permission nodes,
+without roles. At most <code>limits.max-access-entries</code> entries (default <code>64</code>). Empty list: only the owner and
+the admins can use the trigger.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Menu</label><label for="__tabbed_2_2">Command</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>In the trigger menu, set <strong>Access</strong> to <strong>Restricted</strong> (left click: next, right click: previous).</li>
+<li>Right click <strong>Access</strong>. The menu <strong>Own entries — trigger #<code>&lt;id&gt;</code></strong> opens.</li>
+<li>Click <strong>Add player</strong>, <strong>Add LuckPerms group</strong> or <strong>Add permission</strong>, as in the
+   <a href="../privacy-and-roles/#add-an-entry">access list</a>. There is no role to choose.</li>
+<li>To remove an entry, <span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-right-button">Right Button</kbd></span> it.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/dp trigger access &lt;trigger id&gt; &lt;add|remove&gt; &lt;player|group|permission&gt; &lt;subject&gt;
+</code></pre></div>
+<p>Example: <code>/dp trigger access 12 add group vip</code>. Adding group entries requires LuckPerms and
+<code>doorplus.access.group</code>, adding permission entries requires <code>doorplus.access.permission</code>.</p>
+</div>
+</div>
+</div>
+<h3 id="edit-settings">Edit settings<a class="headerlink" href="#edit-settings" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Menu</label><label for="__tabbed_3_2">Command</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>Triggers</strong> from the door (or group) menu.</li>
+<li>Click a trigger. The menu <strong>Trigger #<code>&lt;id&gt;</code> — <code>&lt;type&gt;</code></strong> opens.</li>
+<li>Use the buttons:<ul>
+<li><strong>Action</strong>: left click next, right click previous (only the actions available for this trigger).</li>
+<li><strong>Stop</strong>: left +1, right −1 (shown only with <strong>Go to stop</strong>).</li>
+<li><strong>Access</strong>: left next, right previous; right click opens the own entries when the mode is
+  <strong>Restricted</strong>.</li>
+<li><strong>Cooldown</strong>, <strong>Exit delay</strong>: left +1, right −1, with shift ×10.</li>
+<li><strong>Radius</strong>: left +1, right −1.</li>
+<li><strong>Cancel vanilla interaction</strong>, <strong>Enabled</strong>: click to toggle.</li>
+<li><strong>Highlight</strong>: shows particles on the source for 10 seconds (a ring for proximity zones).</li>
+<li><strong>Remove</strong>: removes the trigger after confirmation.</li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/dp trigger set &lt;trigger id&gt; &lt;action|arg|access|cooldown|cancel-vanilla|enabled|radius|exit-delay&gt; &lt;value&gt;
+</code></pre></div>
+<p>Examples:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>/dp trigger set 12 action open
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>/dp trigger set 12 access restricted
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>/dp trigger set 12 cooldown 40
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>/dp trigger set 15 radius 6
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>/dp trigger set 15 exit-delay 60
+</code></pre></div>
+<p><code>cooldown</code> and <code>exit-delay</code> accept <code>0</code> to <code>72000</code>. An option that does not apply to the trigger gives
+<strong>The option <code>&lt;option&gt;</code> does not apply to this trigger.</strong></p>
+</div>
+</div>
+</div>
+<h3 id="list-triggers">List triggers<a class="headerlink" href="#list-triggers" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/dp trigger list &lt;door|group:group&gt;
+</code></pre></div>
+<p>Shows id, type, provider, position, action, stop, access mode and whether each trigger is enabled.</p>
+<h2 id="inspect-a-source">Inspect a source<a class="headerlink" href="#inspect-a-source" title="Permanent link">&para;</a></h2>
+<p>Inspect mode tells you which triggers are linked to a block or entity.</p>
+<ol>
+<li>Run <code>/dp trigger inspect</code>, or click <strong>Inspect</strong> in a trigger list.</li>
+<li>Click a block, entity, furniture or NPC within the selection time.</li>
+<li>Chat lists each trigger with id, type, target, action and state. It shows only triggers of doors on
+   which you have at least the role User; otherwise:
+   <strong>No triggers you can see are linked to this source.</strong></li>
+</ol>
+<p>Inspect mode ends after one click.</p>
+<h2 id="remove-a-trigger">Remove a trigger<a class="headerlink" href="#remove-a-trigger" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Menu</label><label for="__tabbed_4_2">Command</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Open the trigger, click <strong>Remove</strong>, then confirm.</p>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/dp trigger remove &lt;trigger id&gt;
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Triggers are also removed automatically:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Removed when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Block, Redstone</td>
+<td>Never by itself: the trigger is bound to the position.</td>
+</tr>
+<tr>
+<td>Custom block, Furniture</td>
+<td>The object is broken, or it has a different id when clicked.</td>
+</tr>
+<tr>
+<td>Entity</td>
+<td>The entity dies, breaks or is removed (not on chunk unload).</td>
+</tr>
+<tr>
+<td>NPC</td>
+<td>The NPC is deleted.</td>
+</tr>
+<tr>
+<td>All</td>
+<td>The target door or group is deleted.</td>
+</tr>
+</tbody>
+</table>
+<p>When a source disappears, the door owner (if online) is told where the trigger was.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>With <strong>Protect blocks</strong> on (door menu <strong>Protect blocks</strong>), players without the role Admin cannot
+break or change the trigger sources of the door (blocks and entities). See
+<a href="../../doors/editing/">Editing doors</a>.</p>
+</div>
+<h2 id="triggers-on-a-group">Triggers on a group<a class="headerlink" href="#triggers-on-a-group" title="Permanent link">&para;</a></h2>
+<p>A trigger can target a <a href="../groups/">door group</a> instead of a door:</p>
+<ul>
+<li>In the menu, open the group and click <strong>Triggers</strong>. In commands, write the target as <code>group:&lt;group&gt;</code>,
+  for example <code>/dp trigger add group:gates block</code>.</li>
+<li>Only the group owner (or <code>doorplus.admin.bypass.manage</code>) can list and edit them. To link one you also
+  need the role Admin on every door of the group.</li>
+<li>The action runs on every door of the group, each with its own access check. <strong>Toggle</strong> keeps the doors
+  in sync: if at least one door is closed, all open; otherwise all close.</li>
+<li>The distance and world checks use every door of the group.</li>
+<li>Deleting the group deletes its triggers.</li>
+</ul>
+<h2 id="limits">Limits<a class="headerlink" href="#limits" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Config key</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>limits.max-triggers-per-door</code></td>
+<td><code>16</code></td>
+<td>Triggers per door or per group. Per-player override <code>doorplus.limit.triggers.&lt;n&gt;</code>.</td>
+</tr>
+<tr>
+<td><code>limits.max-trigger-distance</code></td>
+<td><code>64</code></td>
+<td>Maximum distance between source and door, in blocks. <code>0</code> = unlimited.</td>
+</tr>
+<tr>
+<td><code>limits.max-proximity-radius</code></td>
+<td><code>16</code></td>
+<td>Maximum radius of a proximity zone.</td>
+</tr>
+<tr>
+<td><code>limits.max-access-entries</code></td>
+<td><code>64</code></td>
+<td>Maximum own entries of a trigger (and access entries of a door).</td>
+</tr>
+<tr>
+<td><code>triggers.default-cooldown-ticks</code></td>
+<td><code>10</code></td>
+<td>Cooldown of new triggers.</td>
+</tr>
+<tr>
+<td><code>triggers.selection-timeout-seconds</code></td>
+<td><code>30</code></td>
+<td>Time to click a source in selection and inspect mode.</td>
+</tr>
+<tr>
+<td><code>triggers.redstone.enabled</code></td>
+<td><code>true</code></td>
+<td><code>false</code> turns off every redstone trigger on the server.</td>
+</tr>
+<tr>
+<td><code>triggers.entity.allowed-types</code></td>
+<td><code>ITEM_FRAME</code>, <code>GLOW_ITEM_FRAME</code>, <code>ARMOR_STAND</code>, <code>INTERACTION</code>, <code>PAINTING</code></td>
+<td>Entity types that can be triggers.</td>
+</tr>
+<tr>
+<td><code>triggers.proximity.check-interval-ticks</code></td>
+<td><code>10</code></td>
+<td>How often proximity zones are checked.</td>
+</tr>
+<tr>
+<td><code>triggers.proximity.ignore-vanished</code></td>
+<td><code>true</code></td>
+<td>Vanished players do not count in proximity zones.</td>
+</tr>
+</tbody>
+</table>
+<p>All configuration keys: <a href="../../reference/configuration/">Configuration</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../privacy-and-roles/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Privacy and roles">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Privacy and roles
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../keys/" class="md-footer__link md-footer__link--next" aria-label="Next: Keys">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Keys
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Cristiaaaaan
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+    
+  </body>
+</html>

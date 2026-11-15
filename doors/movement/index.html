@@ -1,0 +1,3582 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation of Door+, big animated doors for Paper.">
+      
+      
+        <meta name="author" content="Cristiaaaaan">
+      
+      
+        <link rel="canonical" href="https://cristiaaaaan.github.io/DoorPlus-Wiki/doors/movement/">
+      
+      
+        <link rel="prev" href="../editing/">
+      
+      
+        <link rel="next" href="../menus/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/icon-512.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Movement and animation - Door+ Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#movement-and-animation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Door+ Wiki" class="md-header__button md-logo" aria-label="Door+ Wiki" data-md-component="logo">
+      
+  <img src="../../assets/icon-512.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Door+ Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Movement and animation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Cristiaaaaan/DoorPlus-Wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    DoorPlus-Wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/installation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../creating/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Doors
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../access/privacy-and-roles/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Access and triggers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/commands/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../integrations/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Integrations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developers/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Developers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../help/faq/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Help
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Door+ Wiki" class="md-nav__button md-logo" aria-label="Door+ Wiki" data-md-component="logo">
+      
+  <img src="../../assets/icon-512.png" alt="logo">
+
+    </a>
+    Door+ Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Cristiaaaaan/DoorPlus-Wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    DoorPlus-Wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your first door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/bigdoors-import/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coming from BigDoors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doors
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Doors
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../creating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating a door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../types/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Door types
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Door types
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/big-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Big door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/drawbridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drawbridge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/portcullis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portcullis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/sliding-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sliding door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/garage-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Garage door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/split-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Split door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/folding-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Folding door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/rolling-shutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rolling shutter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform / elevator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/revolving-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Revolving door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/windmill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windmill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/flag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flag
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/clock/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clock
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editing and deleting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Movement and animation
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Movement and animation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-when-a-door-moves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens when a door moves
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checks-before-moving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checks before moving
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#free-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Free space
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passable-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passable blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-blocks-can-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which blocks can move
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-engines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Animation engines
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instant-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instant movement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Speed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easing-and-smoothness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Easing and smoothness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perpetual-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perpetual types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-close" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto-close
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cooldowns-and-locked-doors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cooldowns and locked doors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restart-shutdown-and-crashes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restart, shutdown and crashes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admin controls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sounds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-a-door-does-not-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why a door does not move
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../menus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Menus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Access and triggers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Access and triggers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access/privacy-and-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Privacy and roles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access/triggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Triggers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access/keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access/groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Door groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Language files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/placeholders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Placeholders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../integrations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrations
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Integrations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/luckperms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LuckPerms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/worldguard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WorldGuard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/placeholderapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PlaceholderAPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/custom-blocks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom blocks and furniture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/npcs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NPCs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extension points
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/licence-and-privacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licence, verification and privacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-happens-when-a-door-moves" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens when a door moves
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checks-before-moving" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checks before moving
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#free-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Free space
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passable-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passable blocks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#which-blocks-can-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which blocks can move
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animation-engines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Animation engines
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instant-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instant movement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Speed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#easing-and-smoothness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Easing and smoothness
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collisions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perpetual-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perpetual types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-close" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Auto-close
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cooldowns-and-locked-doors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cooldowns and locked doors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restart-shutdown-and-crashes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restart, shutdown and crashes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admin-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admin controls
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sounds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-a-door-does-not-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why a door does not move
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="movement-and-animation">Movement and animation<a class="headerlink" href="#movement-and-animation" title="Permanent link">&para;</a></h1>
+<p>This page explains what happens every time a door moves: the checks Door+ makes first, how the blocks are animated,
+how fast they go, what happens to players in the way, and what to do when a door refuses to move. It is for server
+owners and staff who build doors or tune <code>config.yml</code>.</p>
+<p>All keys below are in <code>config.yml</code>. Every section except <code>storage</code> is applied by <code>/dp admin reload</code>. The complete
+list of keys is on <a href="../../reference/configuration/">Configuration</a>.</p>
+<h2 id="what-happens-when-a-door-moves">What happens when a door moves<a class="headerlink" href="#what-happens-when-a-door-moves" title="Permanent link">&para;</a></h2>
+<p>When a player, a trigger, a command, auto-close or another plugin asks a door to move:</p>
+<ol>
+<li>Door+ checks that the door may move now: movements not paused, door not locked, the player allowed, the door not
+   already moving, no cooldown. See <a href="#checks-before-moving">Checks before moving</a>.</li>
+<li>It loads the chunks of the start and end positions if needed and keeps them loaded until the movement ends.</li>
+<li>It computes where every block goes and checks the end position: allowed blocks, free space, no other door, inside
+   the world height, allowed by protection plugins.</li>
+<li>It writes the movement to its anti-crash journal in the database.</li>
+<li>It removes the blocks from the world and shows them as moving entities (the animation), unless the movement is
+   <a href="#instant-movement">instant</a>.</li>
+<li>At the end it places the blocks in their new position, saves the new state of the door and deletes the journal
+   entry.</li>
+</ol>
+<p>The open position is never stored as blocks: Door+ remembers where the door was built (its <em>closed</em> position) and
+computes the other positions from the door type. The blocks themselves are read from the world each time the door
+moves. Exceptions: an open <a href="../types/rolling-shutter/">rolling shutter</a> and an active
+<a href="#perpetual-types">perpetual door</a> keep a copy of their blocks in the database.</p>
+<h2 id="checks-before-moving">Checks before moving<a class="headerlink" href="#checks-before-moving" title="Permanent link">&para;</a></h2>
+<p>Door+ makes these checks in this order and stops at the first one that fails. The message the player sees is listed
+in <a href="#why-a-door-does-not-move">Why a door does not move</a>.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Fails when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Door and world</td>
+<td>The door was deleted, or its world is not loaded</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Paused</td>
+<td>An administrator ran <code>/dp admin pause</code>, or the server is shutting down</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Locked</td>
+<td>The door is locked (<code>/dp lock &lt;door&gt;</code>). This also stops auto-close</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Access</td>
+<td>The player is not allowed to use the door. Requests without a player follow their own rule: console, API and auto-close are allowed; redstone needs <strong>Redstone</strong> enabled on the door and <code>triggers.redstone.enabled</code>. See <a href="../../access/privacy-and-roles/">Privacy and roles</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Already there</td>
+<td>The door is already in the requested state (for example "open" on an open door)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Busy</td>
+<td>The door is moving, or still being prepared</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Cooldown</td>
+<td>Less than <code>movement.toggle-cooldown-ticks</code> since the last movement of this door ended</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Blocks</td>
+<td>A block of the door is not allowed in doors (see <a href="#which-blocks-can-move">Which blocks can move</a>)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>World height</td>
+<td>The end position goes above or below the world's height limits</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Free space</td>
+<td>A cell of the end position is not free, belongs to another door, or (rotating types) a cell the door sweeps through is not free. See <a href="#free-space">Free space</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Protection</td>
+<td>A protection plugin such as WorldGuard denies the end position. See <a href="../../integrations/worldguard/">WorldGuard</a></td>
+</tr>
+<tr>
+<td>12</td>
+<td>Other plugins</td>
+<td>Another plugin cancelled the movement through the Door+ API</td>
+</tr>
+</tbody>
+</table>
+<p>The perpetual types (windmill, flag, clock) skip checks 9 and 10 when they start.</p>
+<h2 id="free-space">Free space<a class="headerlink" href="#free-space" title="Permanent link">&para;</a></h2>
+<p>Every cell of the end position that the door does not already occupy must be <strong>free</strong>. Door+ sorts blocks into three
+classes:</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Config key</th>
+<th>Default</th>
+<th>What the door does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Replaceable</td>
+<td><code>blocks.replaceable</code></td>
+<td>Air (always), plus <code>WATER</code>, <code>LAVA</code>, <code>SNOW</code>, <code>FERN</code>, <code>SHORT_GRASS</code>, <code>TALL_GRASS</code>, <code>SEAGRASS</code>, <code>TALL_SEAGRASS</code></td>
+<td>Counts as empty. The door overwrites it and it does <strong>not</strong> come back</td>
+</tr>
+<tr>
+<td>Passable</td>
+<td><code>blocks.passable</code></td>
+<td><code>BARRIER</code>, <code>LIGHT</code>, <code>STRUCTURE_VOID</code></td>
+<td>Counts as free. The door takes its place and puts it back when it leaves. See <a href="#passable-blocks">Passable blocks</a></td>
+</tr>
+<tr>
+<td>Obstacle</td>
+<td>everything else</td>
+<td></td>
+<td>The door does not move</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>A material in both lists counts as passable.</li>
+<li>Blocks with a block entity (chests, signs...) cannot be passable; Door+ ignores them in <code>blocks.passable</code> and warns
+  in the console.</li>
+</ul>
+<p>Door+ also refuses to move a door into a cell that belongs to <strong>another door</strong>, whether that door is standing still
+or moving there at the same moment.</p>
+<p><strong>Swept volume</strong>: the big door, drawbridge, folding door and revolving door turn, so their blocks pass through cells
+outside both the start and end positions (a quarter circle). With <code>movement.check-swept-volume: true</code> (default) those
+cells must be free too. The types that slide (portcullis, sliding door, split door, platform) are checked only at the
+end position: the cells between start and end are not checked.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you create a door whose end position is blocked, Door+ still creates it and warns: <strong>Warning: the
+destination of the door is obstructed. It will not move until the space is free.</strong></p>
+</div>
+<h2 id="passable-blocks">Passable blocks<a class="headerlink" href="#passable-blocks" title="Permanent link">&para;</a></h2>
+<p>Passable blocks let a door move into a space that must stay closed while the door is away. Typical case: a
+portcullis that sinks into the ground. You dig the slot and fill it with barriers, so nobody falls in while the
+portcullis is up.</p>
+<ul>
+<li><strong>When the door arrives</strong>, every passable block in its end position is remembered and replaced: by a door block,
+  or by air if that cell of the door is empty. The barriers stay in place during the whole animation and are only
+  replaced at the end, so the hole is never open.</li>
+<li><strong>When the door leaves</strong>, every remembered block is put back at the start of the movement.</li>
+<li>A passable block that is inside the region when you create the door becomes part of the door and moves with it.</li>
+<li>If a player breaks a door block in a cell with a remembered barrier, the barrier comes back the next time the door
+  moves.</li>
+<li>When a door is deleted, its remembered blocks are forgotten; the blocks stay as they are in the world.</li>
+</ul>
+<h2 id="which-blocks-can-move">Which blocks can move<a class="headerlink" href="#which-blocks-can-move" title="Permanent link">&para;</a></h2>
+<p>A block can be part of a door only if all of these are true:</p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Config key</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Not in the blacklist</td>
+<td><code>blocks.blacklist</code></td>
+<td><code>BEDROCK</code>, <code>END_PORTAL</code>, <code>END_PORTAL_FRAME</code>, <code>NETHER_PORTAL</code>, <code>END_GATEWAY</code>, <code>COMMAND_BLOCK</code>, <code>CHAIN_COMMAND_BLOCK</code>, <code>REPEATING_COMMAND_BLOCK</code>, <code>STRUCTURE_BLOCK</code>, <code>JIGSAW</code>, <code>REINFORCED_DEEPSLATE</code></td>
+</tr>
+<tr>
+<td>In the whitelist, if the whitelist is not empty</td>
+<td><code>blocks.whitelist</code></td>
+<td>Empty: every block not blacklisted is allowed</td>
+</tr>
+<tr>
+<td>No block entity</td>
+<td><code>blocks.allow-tile-entities</code></td>
+<td><code>false</code>. Chests, barrels, furnaces, signs, banners, hoppers, spawners and every other block with a block entity cannot be part of a door, so their content is never lost. The key is reserved: only <code>false</code> is accepted</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Replaceable blocks (air, water, grass...) inside the region are ignored: they are not part of the door.</li>
+<li>Door+ checks the rules when you create the door (<strong>The block ... at x, y, z cannot be part of a door.</strong>) and again
+  every time it moves. A forbidden block placed into the door later (for example a chest) stops the door with
+  <strong>... cannot move: the block at x, y, z cannot be animated.</strong></li>
+<li><strong>Turning blocks</strong>: when a door turns around a vertical axis, blocks with a direction (stairs, doors, logs...) are
+  turned the Minecraft way. Around a horizontal axis, logs and pillars change their axis and blocks with a facing turn
+  it if the new facing is possible for that block; other blocks keep their state.</li>
+<li><strong>Neighbour updates</strong>: the blocks are placed without physics. With <code>movement.update-neighbors: true</code> (default)
+  Door+ then sends one block update around the edges of the door, so redstone and attached blocks next to it react.</li>
+</ul>
+<h2 id="animation-engines">Animation engines<a class="headerlink" href="#animation-engines" title="Permanent link">&para;</a></h2>
+<p><code>animation.engine</code> chooses how moving blocks are shown:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>block_display</code> (default)</th>
+<th><code>falling_block</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entities per block</td>
+<td>1 (a block display)</td>
+<td>2 (a falling block riding an invisible armor stand)</td>
+</tr>
+<tr>
+<td>Rotation</td>
+<td>Blocks turn smoothly with the door</td>
+<td>Blocks stay straight while they travel along the arc</td>
+</tr>
+<tr>
+<td>Rolling shutter rows</td>
+<td>Shrink as they roll into the edge</td>
+<td>Disappear at the edge</td>
+</tr>
+<tr>
+<td>Smoothness</td>
+<td>The client interpolates between updates</td>
+<td>Moved at every update</td>
+</tr>
+<tr>
+<td>Availability</td>
+<td>Always</td>
+<td>Door+ tests it once after start-up; if the test fails it uses <code>block_display</code> and logs <strong>animation.engine is falling_block but that engine is unavailable; using block_display</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Use <code>block_display</code> unless you specifically want the falling-block look. It needs half the entities and is the only
+engine that shows rotation and shrinking.</p>
+<p>Options of <code>block_display</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Allowed</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>animation.display.view-range</code></td>
+<td><code>1.0</code></td>
+<td>0.01 to 64</td>
+<td>View range of the moving blocks (the display entity view range setting)</td>
+</tr>
+<tr>
+<td><code>animation.display.fixed-brightness</code></td>
+<td><code>true</code></td>
+<td>true/false</td>
+<td>Each moving block keeps the light of the cell it started from, so it does not flicker</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Hidden blocks</strong>: a block whose six neighbours are all solid, light-blocking blocks of the same door gets no entity:
+nobody can see it. It is still moved and placed at the end.</p>
+<h2 id="instant-movement">Instant movement<a class="headerlink" href="#instant-movement" title="Permanent link">&para;</a></h2>
+<p>A movement skips the animation and the blocks jump to their end position in the same tick when:</p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Config key</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No player within this distance of the door (start and end positions)</td>
+<td><code>animation.viewer-range</code></td>
+<td>64 blocks</td>
+</tr>
+<tr>
+<td>A chunk of the door had to be loaded for the movement</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>The door has more animated blocks than this</td>
+<td><code>animation.max-animated-blocks</code></td>
+<td>1500</td>
+</tr>
+<tr>
+<td>The animation entities of all moving doors on the server would pass this total</td>
+<td><code>animation.max-global-animated-blocks</code></td>
+<td>10000</td>
+</tr>
+<tr>
+<td>The movement was requested as instant (for example auto-close in unloaded chunks)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Hidden blocks do not count towards these limits. With <code>falling_block</code> each block counts as 2 entities in the global
+total. Instant movements still run every check: a door that cannot move animated cannot move instantly either.</p>
+<h2 id="speed">Speed<a class="headerlink" href="#speed" title="Permanent link">&para;</a></h2>
+<p>The time a movement takes depends on the type:</p>
+<table>
+<thead>
+<tr>
+<th>Movement</th>
+<th>Duration in seconds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sliding by <code>n</code> blocks (portcullis, sliding door, split door, platform, rolling shutter)</td>
+<td><code>n / (speed.blocks-per-second × m)</code></td>
+</tr>
+<tr>
+<td>Turning 90° (big door, drawbridge, revolving door per quarter turn)</td>
+<td>the longer of <code>90 / (speed.degrees-per-second × m)</code> and <code>(1.571 × r) / (speed.max-tip-speed × m)</code></td>
+</tr>
+<tr>
+<td>Garage door</td>
+<td><code>height / (speed.blocks-per-second × m)</code></td>
+</tr>
+<tr>
+<td>Folding door</td>
+<td>like turning 90°, with <code>r</code> = width of the hinge panel</td>
+</tr>
+</tbody>
+</table>
+<p><code>m</code> is the door's <strong>speed multiplier</strong> and <code>r</code> is the distance from the axis to the farthest corner of the door. The
+second part of the turning formula slows down big doors so their far end never moves faster than
+<code>speed.max-tip-speed</code> blocks per second.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Allowed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>speed.blocks-per-second</code></td>
+<td><code>2.0</code></td>
+<td>0.05 to 100</td>
+</tr>
+<tr>
+<td><code>speed.degrees-per-second</code></td>
+<td><code>45.0</code></td>
+<td>1 to 3600</td>
+</tr>
+<tr>
+<td><code>speed.max-tip-speed</code></td>
+<td><code>6.0</code></td>
+<td>0.1 to 200</td>
+</tr>
+<tr>
+<td><code>animation.min-ticks</code></td>
+<td><code>10</code> (0.5 s)</td>
+<td>1 to 1200</td>
+</tr>
+<tr>
+<td><code>animation.max-ticks</code></td>
+<td><code>600</code> (30 s)</td>
+<td>1 to 12000, not below <code>min-ticks</code></td>
+</tr>
+</tbody>
+</table>
+<p>Every duration is rounded to ticks and then kept between <code>animation.min-ticks</code> and <code>animation.max-ticks</code>.</p>
+<p><strong>Examples with the defaults</strong>: a portcullis rising 4 blocks takes 2 seconds; a big door 4 wide takes 2 seconds; a big
+door 16 wide (radius 15) takes about 3.9 seconds.</p>
+<p><strong>Per-door multiplier</strong>: <code>/dp set &lt;door&gt; speed &lt;multiplier&gt;</code>, or the <strong>Speed</strong> button of the door menu (left +0.25,
+right −0.25). The value must be between <code>limits.speed-multiplier.min</code> (default 0.25) and
+<code>limits.speed-multiplier.max</code> (default 4.0); 2.0 means twice as fast. The windmill, flag and clock do not use the
+multiplier: see their pages.</p>
+<h2 id="easing-and-smoothness">Easing and smoothness<a class="headerlink" href="#easing-and-smoothness" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Allowed</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>animation.easing</code></td>
+<td><code>EASE_IN_OUT</code></td>
+<td><code>LINEAR</code>, <code>EASE_IN_OUT</code></td>
+<td><code>EASE_IN_OUT</code> starts slowly, speeds up and slows down before the end; <code>LINEAR</code> moves at a constant speed</td>
+</tr>
+<tr>
+<td><code>animation.update-interval-ticks</code></td>
+<td><code>2</code></td>
+<td>1 to 5</td>
+<td>How often (in ticks) the moving blocks are updated. Lower is smoother and costs more</td>
+</tr>
+</tbody>
+</table>
+<h2 id="collisions">Collisions<a class="headerlink" href="#collisions" title="Permanent link">&para;</a></h2>
+<p>The collision mode decides what moving blocks do to players and mobs during the animation.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Name in menus</th>
+<th>During the animation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>none</code></td>
+<td><strong>None</strong></td>
+<td>Entities pass through the moving blocks</td>
+</tr>
+<tr>
+<td><code>shulker</code></td>
+<td><strong>Solid</strong></td>
+<td>The moving blocks are solid: an invisible shulker rides along with every outer block of the door</td>
+</tr>
+<tr>
+<td><code>push</code></td>
+<td><strong>Push</strong></td>
+<td>Entities touched by a moving block are pushed away</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Server default</strong>: <code>collision.default-mode</code> (default <code>none</code>). <code>collision.allowed-modes</code> lists the modes doors may
+  use (default all three); if the default mode is not in the list, the first allowed mode is used.</li>
+<li><strong>Per door</strong>: <code>/dp set &lt;door&gt; collision &lt;mode&gt;</code> with <code>default</code>, <code>none</code>, <code>shulker</code> or <code>push</code>, or the
+  <strong>Collisions</strong> button of the door menu (cycles through <strong>default</strong> and the allowed modes). Only allowed modes are
+  accepted.</li>
+</ul>
+<p><strong>Solid (<code>shulker</code>)</strong>:</p>
+<ul>
+<li>Only outer blocks (at least one face not touching another block of the door) get a shulker.</li>
+<li>The shulker hitboxes are straight cubes, so for turning doors the collision is approximate.</li>
+<li><code>collision.shulker.max-per-door</code> (default 200, 0 to 10000): if the door has more outer blocks, that movement uses
+  <code>push</code> instead.</li>
+<li>Door+ tests at start-up whether the server supports the riding technique; if it does not, <code>push</code> is used.</li>
+<li>The shulkers cannot be hurt, targeted or teleported.</li>
+</ul>
+<p><strong>Push</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default</th>
+<th>Allowed</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>collision.push.non-players</code></td>
+<td><code>true</code></td>
+<td>true/false</td>
+<td>Also push mobs and dropped items. Players (except spectators) are always pushed</td>
+</tr>
+<tr>
+<td><code>collision.push.strength</code></td>
+<td><code>1.2</code></td>
+<td>0 to 10</td>
+<td>Push speed = speed of the block × strength</td>
+</tr>
+<tr>
+<td><code>collision.push.max-velocity</code></td>
+<td><code>1.5</code></td>
+<td>0.05 to 10</td>
+<td>Highest push speed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Eviction at the end</strong>: with <code>collision.evict-on-finish: true</code> (default), in every mode, a player or mob that ends up
+inside a solid block of the door is teleported to the nearest free spot: first further along the direction the door
+moved (up to 32 blocks), then upwards (up to 32 blocks), then around it (up to 3 blocks). A free spot is two passable
+blocks on top of each other. Entities riding something are not moved.</p>
+<p><strong>Platforms</strong> carry what stands on them, whatever the mode; see <a href="../types/platform/#on-the-move">Platform / elevator</a>.</p>
+<p><strong>Perpetual types</strong> have no collisions and no eviction.</p>
+<h2 id="perpetual-types">Perpetual types<a class="headerlink" href="#perpetual-types" title="Permanent link">&para;</a></h2>
+<p>The <a href="../types/windmill/">windmill</a>, <a href="../types/flag/">flag</a> and <a href="../types/clock/">clock</a> keep moving while they are
+<strong>Active</strong>.</p>
+<ul>
+<li><strong>Starting</strong>: Door+ saves a copy of the door's blocks in the database. The state becomes <strong>Active</strong>.</li>
+<li><strong>Animated or resting</strong>: an active door is animated only while its chunks are loaded and a player is within
+  <code>animation.viewer-range</code> blocks. Otherwise it <em>rests</em>: its blocks are in the world in their built position. Door+
+  checks every <code>perpetual.check-interval-ticks</code> (default 20, allowed 1 to 1200) and switches between the two. The
+  position depends only on the time since it was started, so it looks continuous when you come back.</li>
+<li><strong>Animation limits</strong>: a door that would pass <code>animation.max-animated-blocks</code> or
+  <code>animation.max-global-animated-blocks</code> keeps resting.</li>
+<li><strong>Changes while resting</strong>: if someone changes the blocks of a resting door, the saved copy is updated the next time
+  it is animated.</li>
+<li><strong>Stopping</strong>: the windmill finishes its current turn first; the flag and the clock stop at once. The blocks go back
+  to their built position, the saved copy is deleted and the state becomes <strong>Inactive</strong>.</li>
+<li><strong>Restart</strong>: an active door stays active. At start-up, any empty cell of its area is refilled from the saved copy,
+  then it is animated again when a player comes near.</li>
+<li>Follow state, auto-close and cooldowns work as for the other types.</li>
+</ul>
+<h2 id="auto-close">Auto-close<a class="headerlink" href="#auto-close" title="Permanent link">&para;</a></h2>
+<p>A door can close by itself some seconds after it opens.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td><code>/dp set &lt;door&gt; auto-close &lt;seconds&gt;</code> (0 = off)</td>
+</tr>
+<tr>
+<td>Menu</td>
+<td><strong>Auto-close</strong> in the door menu (left +1 s, right −1 s, shift ×10)</td>
+</tr>
+<tr>
+<td>Maximum</td>
+<td><code>limits.max-auto-close-seconds</code> (default 600)</td>
+</tr>
+<tr>
+<td>Default for new doors</td>
+<td><code>defaults.auto-close-seconds</code> (default 0)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The countdown starts every time the door arrives in its open state, whatever opened it. It works for open/closed
+  types and perpetual types (it stops them); it has no effect on platforms and revolving doors.</li>
+<li>It does not start while a trigger with the <strong>Follow state</strong> action is active (a player still in the proximity zone,
+  a lever still on); it starts when the last one turns off.</li>
+<li>The countdown is cancelled when the door starts moving.</li>
+<li>Auto-close does not need access, but it does not close a <strong>locked</strong> door.</li>
+<li>If the door's chunks are not loaded when the countdown ends: with <code>movement.auto-close-unloaded: true</code> (default) the
+  door closes instantly; with <code>false</code> it closes when one of its chunks loads again.</li>
+<li>If a cooldown is running, auto-close tries again when it ends.</li>
+<li>After a restart, doors that were left open start a new full countdown.</li>
+</ul>
+<h2 id="cooldowns-and-locked-doors">Cooldowns and locked doors<a class="headerlink" href="#cooldowns-and-locked-doors" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>movement.toggle-cooldown-ticks</code> (default 0 = off, up to 72000) is a pause after every movement of a door, counted
+  from the end of the movement. Requests during the pause are ignored without a message. Triggers have their own
+  cooldown; see <a href="../../access/triggers/">Triggers</a>.</li>
+<li>A <strong>locked</strong> door cannot be moved by anyone, by any cause, including auto-close and redstone. Players see <strong>... is
+  locked.</strong> in the action bar. Unlock it with <code>/dp unlock &lt;door&gt;</code> or the <strong>Lock</strong> button of the door menu.</li>
+</ul>
+<h2 id="restart-shutdown-and-crashes">Restart, shutdown and crashes<a class="headerlink" href="#restart-shutdown-and-crashes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Normal shutdown or reload of the plugin</strong>: running animations finish instantly (the blocks are placed at the end
+  position and the new state is saved). Active perpetual doors put their blocks back in the world and stay active.
+  Requests made while the server is stopping are refused.</li>
+<li><strong>Crash</strong>: before removing any block Door+ writes the movement to a journal in the database. At the next start it
+  completes every interrupted movement: the blocks are placed at the end position and the door gets its new state.
+  The console logs <strong>Journal: recovered X of Y interrupted door movements</strong>. A journal entry is kept for later if the
+  door's world is not loaded, or if a block in it is no longer valid (the console says why, with the door id). A
+  door being recovered counts as busy.</li>
+<li><strong>Left-over entities</strong>: moving-block entities are never saved with the world. If some remain anyway, Door+ removes
+  them at start-up and whenever their chunk loads; <code>/dp admin cleanup</code> removes them in all loaded chunks.</li>
+</ul>
+<h2 id="admin-controls">Admin controls<a class="headerlink" href="#admin-controls" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Permission (default: operators)</th>
+<th>Effect</th>
+<th>Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/dp admin pause</code></td>
+<td><code>doorplus.admin.pause</code></td>
+<td>Pauses all door movements; run it again to resume. New requests are refused, running animations finish normally</td>
+<td><strong>Door movements paused.</strong> / <strong>Door movements resumed.</strong></td>
+</tr>
+<tr>
+<td><code>/dp admin stopall</code></td>
+<td><code>doorplus.admin.stopall</code></td>
+<td>Finishes every running animation instantly. Animated perpetual doors go to rest; they stay active and start again at the next check if a player is near</td>
+<td><strong>Finished N running animations.</strong></td>
+</tr>
+<tr>
+<td><code>/dp admin cleanup</code></td>
+<td><code>doorplus.admin.cleanup</code></td>
+<td>Removes left-over moving-block entities in loaded chunks</td>
+<td><strong>Removed N orphan entities.</strong></td>
+</tr>
+<tr>
+<td><code>/dp admin reload</code></td>
+<td><code>doorplus.admin.reload</code></td>
+<td>Reloads <code>config.yml</code> (except <code>storage</code>) and the language files</td>
+<td><strong>Configuration and language files reloaded.</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sounds">Sounds<a class="headerlink" href="#sounds" title="Permanent link">&para;</a></h2>
+<p>Each type has its own sounds in <code>sounds.&lt;type&gt;</code>, for example <code>sounds.big_door</code>. The defaults are listed on each type
+page.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">sounds</span><span class="p">:</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w">                 </span><span class="c1"># false = no door sounds at all</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">big_door</span><span class="p">:</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> sound</span><span class="p">:</span><span class="w"> </span><span class="s">'minecraft:block.wooden_door.open'</span><span class="p p-Indicator">,</span><span class="nt"> volume</span><span class="p">:</span><span class="w"> </span><span class="nv">1.0</span><span class="p p-Indicator">,</span><span class="nt"> pitch</span><span class="p">:</span><span class="w"> </span><span class="nv">0.7</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">loop</span><span class="p">:</span><span class="w">  </span><span class="p p-Indicator">{</span><span class="nt"> sound</span><span class="p">:</span><span class="w"> </span><span class="s">''</span><span class="p p-Indicator">,</span><span class="nt"> volume</span><span class="p">:</span><span class="w"> </span><span class="nv">0.0</span><span class="p p-Indicator">,</span><span class="nt"> pitch</span><span class="p">:</span><span class="w"> </span><span class="nv">1.0</span><span class="p p-Indicator">,</span><span class="nt"> interval-ticks</span><span class="p">:</span><span class="w"> </span><span class="nv">10</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">end</span><span class="p">:</span><span class="w">   </span><span class="p p-Indicator">{</span><span class="nt"> sound</span><span class="p">:</span><span class="w"> </span><span class="s">'minecraft:block.wooden_door.close'</span><span class="p p-Indicator">,</span><span class="nt"> volume</span><span class="p">:</span><span class="w"> </span><span class="nv">1.0</span><span class="p p-Indicator">,</span><span class="nt"> pitch</span><span class="p">:</span><span class="w"> </span><span class="nv">0.7</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sound</code></td>
+<td>Namespaced sound key. Empty = no sound</td>
+</tr>
+<tr>
+<td><code>volume</code></td>
+<td>0 or more</td>
+</tr>
+<tr>
+<td><code>pitch</code></td>
+<td>Kept between 0.5 and 2.0</td>
+</tr>
+<tr>
+<td><code>interval-ticks</code></td>
+<td><code>loop</code> only: ticks between two plays (at least 1, default 10)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>start</code> plays when the movement starts, at the centre of the start position; <code>loop</code> plays during the animation and
+  <code>end</code> at the end, at the centre of the end position. Sounds play in the <strong>Blocks</strong> sound category.</li>
+<li>Perpetual types: <code>start</code> when switched on, <code>loop</code> while animated, <code>end</code> when stopped.</li>
+</ul>
+<h2 id="why-a-door-does-not-move">Why a door does not move<a class="headerlink" href="#why-a-door-does-not-move" title="Permanent link">&para;</a></h2>
+<p>These are the messages the player who used the door (or the command sender) can receive, and how to fix each one.</p>
+<table>
+<thead>
+<tr>
+<th>Message</th>
+<th>Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Door movements are paused by an administrator.</strong></td>
+<td><code>/dp admin pause</code> is on</td>
+<td>Run <code>/dp admin pause</code> again</td>
+</tr>
+<tr>
+<td><strong>... is locked.</strong> (action bar)</td>
+<td>The door is locked</td>
+<td><code>/dp unlock &lt;door&gt;</code></td>
+</tr>
+<tr>
+<td><strong>You cannot use ....</strong> (action bar)</td>
+<td>The player has no access</td>
+<td>Change the privacy or add the player; see <a href="../../access/privacy-and-roles/">Privacy and roles</a></td>
+</tr>
+<tr>
+<td><strong>... cannot move: the block at x, y, z cannot be animated.</strong></td>
+<td>A blacklisted block, a block outside the whitelist, or a block with a block entity is in the door</td>
+<td>Remove that block, or change <code>blocks.blacklist</code> / <code>blocks.whitelist</code></td>
+</tr>
+<tr>
+<td><strong>... cannot move: something is in the way at x, y, z.</strong></td>
+<td>That cell of the end position (or of the swept area) is not free, or belongs to another door</td>
+<td>Remove the block, move the other door, or change the direction</td>
+</tr>
+<tr>
+<td><strong>... cannot move beyond the height limits of the world.</strong></td>
+<td>The end position is above or below the world limits</td>
+<td>Change the direction, the blocks to move or the stops</td>
+</tr>
+<tr>
+<td><strong>... cannot move here: denied by ....</strong></td>
+<td>A protection plugin (named in the message) denies the end position</td>
+<td>Allow the door in that plugin; see <a href="../../integrations/worldguard/">WorldGuard</a></td>
+</tr>
+<tr>
+<td><strong>... could not move because of an error. Details are in the server console.</strong></td>
+<td>Unexpected error</td>
+<td>Check the console and report it</td>
+</tr>
+<tr>
+<td><strong>The world of ... is not loaded.</strong> (commands only)</td>
+<td>The door's world is not loaded</td>
+<td>Load the world</td>
+</tr>
+<tr>
+<td><strong>Door not found.</strong> (commands only)</td>
+<td>The door does not exist</td>
+<td>Check the name or id</td>
+</tr>
+</tbody>
+</table>
+<p>No message is sent when:</p>
+<ul>
+<li>the door is already in the requested state (for example opening an open door);</li>
+<li>the door is already moving;</li>
+<li>the door's cooldown (<code>movement.toggle-cooldown-ticks</code>) is running;</li>
+<li>another plugin cancelled the movement.</li>
+</ul>
+<p>If a door seems to do nothing, check these four cases, then <code>/dp admin debug &lt;door&gt;</code>, which writes the internal state
+of the door to the console.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../editing/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Editing and deleting">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Editing and deleting
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../menus/" class="md-footer__link md-footer__link--next" aria-label="Next: Menus">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Menus
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Cristiaaaaan
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+    
+  </body>
+</html>

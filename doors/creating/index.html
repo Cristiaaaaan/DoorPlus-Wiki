@@ -1,0 +1,3522 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation of Door+, big animated doors for Paper.">
+      
+      
+        <meta name="author" content="Cristiaaaaan">
+      
+      
+        <link rel="canonical" href="https://cristiaaaaan.github.io/DoorPlus-Wiki/doors/creating/">
+      
+      
+        <link rel="prev" href="../../getting-started/bigdoors-import/">
+      
+      
+        <link rel="next" href="../types/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/icon-512.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Creating a door - Door+ Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#creating-a-door" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Door+ Wiki" class="md-header__button md-logo" aria-label="Door+ Wiki" data-md-component="logo">
+      
+  <img src="../../assets/icon-512.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Door+ Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Creating a door
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Cristiaaaaan/DoorPlus-Wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    DoorPlus-Wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../getting-started/installation/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Getting started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Doors
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../access/privacy-and-roles/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Access and triggers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/commands/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../integrations/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Integrations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../developers/api/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Developers
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../help/faq/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Help
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Door+ Wiki" class="md-nav__button md-logo" aria-label="Door+ Wiki" data-md-component="logo">
+      
+  <img src="../../assets/icon-512.png" alt="logo">
+
+    </a>
+    Door+ Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Cristiaaaaan/DoorPlus-Wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    DoorPlus-Wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your first door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/bigdoors-import/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Coming from BigDoors
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doors
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Doors
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating a door
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creating a door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-the-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start the creation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-creation-stick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The creation stick
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-steps-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the steps work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-in-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps in order
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps in order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-corners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2–3. Corners
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-pivot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Pivot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-pivot-axis-drawbridge-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Pivot axis (drawbridge only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Direction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Triggers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-confirm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Confirm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ending-a-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ending a creation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shape-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shape errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redefining-the-region-of-an-existing-door" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redefining the region of an existing door
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../types/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Door types
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Door types
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/big-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Big door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/drawbridge/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Drawbridge
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/portcullis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portcullis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/sliding-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sliding door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/garage-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Garage door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/split-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Split door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/folding-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Folding door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/rolling-shutter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rolling shutter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/platform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform / elevator
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/revolving-door/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Revolving door
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/windmill/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Windmill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/flag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flag
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../types/clock/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Clock
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../editing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Editing and deleting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../movement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Movement and animation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../menus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Menus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Access and triggers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Access and triggers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access/privacy-and-roles/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Privacy and roles
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access/triggers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Triggers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access/keys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../access/groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Door groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/commands/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Commands
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/permissions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/limits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Language files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Storage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/placeholders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Placeholders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../integrations/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrations
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Integrations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/luckperms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LuckPerms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/worldguard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WorldGuard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/placeholderapi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PlaceholderAPI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/custom-blocks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Custom blocks and furniture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/npcs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NPCs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developers
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Developers
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Events
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developers/extensions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Extension points
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/licence-and-privacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Licence, verification and privacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before you start
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-the-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start the creation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-creation-stick" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The creation stick
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-the-steps-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the steps work
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps-in-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps in order
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps in order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Name
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-corners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2–3. Corners
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-pivot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Pivot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-pivot-axis-drawbridge-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Pivot axis (drawbridge only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-direction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Direction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Triggers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-confirm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Confirm
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ending-a-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ending a creation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation errors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Validation errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shape-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shape errors
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redefining-the-region-of-an-existing-door" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redefining the region of an existing door
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="creating-a-door">Creating a door<a class="headerlink" href="#creating-a-door" title="Permanent link">&para;</a></h1>
+<p>This page describes the guided creation of a door in full: how to start it, every step for every door type,
+the preview, how it ends, and every error you can get with its fix. It is for players who create doors and
+for staff who help them.</p>
+<p>For a short hands-on example, see <a href="../../getting-started/first-door/">Your first door</a>.</p>
+<h2 id="before-you-start">Before you start<a class="headerlink" href="#before-you-start" title="Permanent link">&para;</a></h2>
+<p>You can start a creation only if all of these are true. The checks run in this order; the first one that
+fails stops the start with the message shown.</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Message if it fails</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The type is enabled in <code>types.&lt;type&gt;.enabled</code></td>
+<td><strong>Doors of type ... are disabled on this server.</strong></td>
+</tr>
+<tr>
+<td>You have <code>doorplus.create.&lt;type&gt;</code></td>
+<td><strong>You do not have permission to do this.</strong></td>
+</tr>
+<tr>
+<td>You own fewer doors than your limit (<code>limits.doors-per-player</code>, default 10)</td>
+<td><strong>You already own the maximum number of doors (...).</strong></td>
+</tr>
+<tr>
+<td>You are not already creating or redefining a door</td>
+<td><strong>You are already creating a door. Finish it or type /door cancel.</strong></td>
+</tr>
+<tr>
+<td>You have a free inventory slot</td>
+<td><strong>You need a free inventory slot for the creation stick.</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Your door limit can be raised per player with permissions, and <code>doorplus.admin.bypass.limits</code> ignores it.
+See <a href="../../reference/limits/">Limits</a>.</p>
+<h2 id="start-the-creation">Start the creation<a class="headerlink" href="#start-the-creation" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Command</label><label for="__tabbed_1_2">Menu</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Type <code>/dp create &lt;type&gt; [name]</code>.</p>
+<ul>
+<li><code>&lt;type&gt;</code> is the type id: <code>big_door</code>, <code>drawbridge</code>, <code>portcullis</code>, <code>sliding_door</code>, <code>garage_door</code>,
+  <code>split_door</code>, <code>folding_door</code>, <code>rolling_shutter</code>, <code>platform</code>, <code>revolving_door</code>, <code>windmill</code>, <code>flag</code> or
+  <code>clock</code>. Case does not matter and <code>-</code> works instead of <code>_</code>. Tab completion lists only the enabled types
+  you may create.</li>
+<li><code>[name]</code> is optional. If you leave it out, the first step asks for the name in chat.</li>
+</ul>
+<p>If the name you type is not valid, the command stops with
+<strong>Invalid name: use 1-32 letters, digits, _ or -.</strong> If you already own a door with that name, the
+creation starts and the first step asks for another name.</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Type <code>/dp</code> to open the main menu <strong>Door+ — Your doors</strong>.</li>
+<li>Click <strong>Create a door</strong>. The menu <strong>Choose the door type</strong> lists the enabled types you may create.
+   If there are none, the button says <strong>You cannot create any door type.</strong></li>
+<li>Click a type. The menu closes and the creation starts. The first step asks for the name in chat.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>When the creation starts you receive the <strong>Door+ creation stick</strong> and the message
+<strong>Creating a ... Use the stick you just received.</strong></p>
+<h2 id="the-creation-stick">The creation stick<a class="headerlink" href="#the-creation-stick" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The stick goes in the slot in your hand if it is empty, otherwise in the first empty slot.</li>
+<li>Left click and right click on a block both select it. The click never breaks or uses the block.</li>
+<li>Clicking with the stick when no block is expected shows <strong>Use the buttons or the chat to continue.</strong> above
+  the hotbar.</li>
+<li>You cannot drop the stick, move it in your inventory, put it in a container, craft with it or lose it on
+  death.</li>
+<li>When the creation ends for any reason, the stick is removed. A creation stick found outside a creation is
+  deleted.</li>
+</ul>
+<h2 id="how-the-steps-work">How the steps work<a class="headerlink" href="#how-the-steps-work" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Each instruction starts with <strong>[step/total]</strong>, for example <strong>[3/7]</strong>. The total can change after you
+  select the region, because some steps depend on the shape (see the table below).</li>
+<li>Most steps show clickable chat buttons. <strong>[Back]</strong> returns to the previous step (it is missing on the first
+  step). <strong>[Cancel]</strong> ends the creation.</li>
+<li>Only the newest buttons work. Clicking an older button shows <strong>That button is no longer valid.</strong></li>
+<li>When a step asks for text in chat, your message is hidden from other players. Type <code>cancel</code> to abort the
+  chat input. The chat input times out after 30 seconds.</li>
+</ul>
+<h2 id="steps-in-order">Steps in order<a class="headerlink" href="#steps-in-order" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Step</th>
+<th>What you do</th>
+<th>Shown for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Name</td>
+<td>Type the name in chat</td>
+<td>Only if you did not give a valid, free name in the command</td>
+</tr>
+<tr>
+<td>2</td>
+<td>First corner</td>
+<td>Click a block with the stick</td>
+<td>Every type</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Second corner</td>
+<td>Click the opposite corner</td>
+<td>Every type</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Pivot</td>
+<td>Click a block of the region</td>
+<td><code>big_door</code>, <code>drawbridge</code>, <code>folding_door</code>, <code>flag</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Pivot axis</td>
+<td>Click a second block on the pivot row</td>
+<td><code>drawbridge</code>, only when the axis is ambiguous</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Direction</td>
+<td>Click one of the offered directions</td>
+<td>Types with more than one valid direction for this region</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Parameters</td>
+<td>Click a value or type one</td>
+<td><code>split_door</code> (split mode), <code>rolling_shutter</code> (visible rows)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Triggers</td>
+<td>Collect triggers, or click <strong>[Done]</strong></td>
+<td>Every type</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Confirm</td>
+<td>Check the summary and click <strong>[Create]</strong></td>
+<td>Every type</td>
+</tr>
+</tbody>
+</table>
+<p>Steps per type:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Steps after the two corners</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>big_door</code></td>
+<td>Pivot, Direction (Clockwise / Counter-clockwise)</td>
+</tr>
+<tr>
+<td><code>drawbridge</code></td>
+<td>Pivot, Pivot axis (only if ambiguous), Direction (two, depending on the axis)</td>
+</tr>
+<tr>
+<td><code>portcullis</code></td>
+<td>Direction (Up / Down)</td>
+</tr>
+<tr>
+<td><code>sliding_door</code></td>
+<td>Direction (North / South / East / West)</td>
+</tr>
+<tr>
+<td><code>garage_door</code></td>
+<td>Direction (two, perpendicular to the door), only if the region is a vertical wall one block thick</td>
+</tr>
+<tr>
+<td><code>split_door</code></td>
+<td>Parameters: split mode</td>
+</tr>
+<tr>
+<td><code>folding_door</code></td>
+<td>Pivot (on a vertical edge), Direction (two, perpendicular to the door)</td>
+</tr>
+<tr>
+<td><code>rolling_shutter</code></td>
+<td>Direction (in the plane of the shutter), Parameters: visible rows</td>
+</tr>
+<tr>
+<td><code>platform</code></td>
+<td>Direction (Up / Down / North / East / South / West)</td>
+</tr>
+<tr>
+<td><code>revolving_door</code></td>
+<td>Direction (Clockwise / Counter-clockwise)</td>
+</tr>
+<tr>
+<td><code>windmill</code></td>
+<td>Direction (Clockwise / Counter-clockwise)</td>
+</tr>
+<tr>
+<td><code>flag</code></td>
+<td>Pivot (on a vertical edge)</td>
+</tr>
+<tr>
+<td><code>clock</code></td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p>Then every type has Triggers and Confirm. The shape each type needs is explained on its page under
+<a href="../types/">Door types</a>.</p>
+<h3 id="1-name">1. Name<a class="headerlink" href="#1-name" title="Permanent link">&para;</a></h3>
+<p>Chat shows <strong>Type the name of the door in chat (1-32 letters, digits, _ or -).</strong></p>
+<ul>
+<li>A name is 1 to 32 characters: letters, digits, <code>_</code> and <code>-</code>. No spaces.</li>
+<li>You cannot own two doors with the same name. Names are compared without case: <code>Gate</code> and <code>gate</code> are the
+  same name. Other players can use the same name for their own doors.</li>
+<li>An invalid or taken name shows the error and asks again.</li>
+<li>Chat shows <strong>Name: ...</strong> when the name is accepted.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Typing <code>cancel</code>, or waiting 30 seconds, during the name step ends the whole creation if no name was set
+yet (<strong>Door creation cancelled.</strong>).</p>
+</div>
+<h3 id="23-corners">2–3. Corners<a class="headerlink" href="#23-corners" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Click the first corner of the door with the stick.</strong> Chat shows <strong>First corner set at x, y, z.</strong></li>
+<li><strong>Click the opposite corner of the door.</strong> Chat shows
+   <strong>Second corner set at x, y, z. Region: AxBxC.</strong> The size is east-west × height × north-south.</li>
+</ol>
+<p>The two blocks are opposite corners of a box; every block inside the box belongs to the door. Air and the
+blocks in <code>blocks.replaceable</code> (water, lava, snow layers, grass, ferns, seagrass) are not part of the door.</p>
+<ul>
+<li>The first corner cannot be in a world listed in <code>worlds.disabled</code>
+  (<strong>Doors cannot be created in the world ...</strong>).</li>
+<li>The second corner must be in the same world as the first
+  (<strong>Both corners must be in the same world as the door.</strong>).</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Clock: where the face points</p>
+<p>For a <code>clock</code>, the face of the clock points toward you when you click the second corner. Stand in front
+of the clock when you click it.</p>
+</div>
+<h3 id="4-pivot">4. Pivot<a class="headerlink" href="#4-pivot" title="Permanent link">&para;</a></h3>
+<p><strong>Click the block of the door the rotation passes through (the pivot).</strong> Chat shows
+<strong>Pivot set at x, y, z.</strong></p>
+<p>The block must be inside the region (<strong>The pivot must be a block inside the selected region.</strong>). Each type has
+its own rule:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Where the pivot goes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>big_door</code></td>
+<td>Any block of the region. The door turns around the vertical line through it.</td>
+</tr>
+<tr>
+<td><code>drawbridge</code></td>
+<td>A block on an edge of the region: the hinge row the bridge turns around.</td>
+</tr>
+<tr>
+<td><code>folding_door</code>, <code>flag</code></td>
+<td>A block on one of the two vertical edges of the panel.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-pivot-axis-drawbridge-only">5. Pivot axis (drawbridge only)<a class="headerlink" href="#5-pivot-axis-drawbridge-only" title="Permanent link">&para;</a></h3>
+<p>If you click a corner block as the pivot of a drawbridge that is not a flat wall, the hinge row could run in
+two directions. Chat shows
+<strong>The pivot axis is ambiguous: click a second block on the pivot row.</strong></p>
+<p>Click another block of the hinge row, at the same height as the pivot. Chat shows <strong>Pivot axis set.</strong></p>
+<h3 id="6-direction">6. Direction<a class="headerlink" href="#6-direction" title="Permanent link">&para;</a></h3>
+<p><strong>Choose the opening direction:</strong> followed by one button per valid direction. The current choice is green and
+bold. When you arrive at this step, the type default is already selected and the preview already shows where
+the door goes (see <a href="#preview">Preview</a>). Click a direction to choose it and continue; chat shows
+<strong>Direction: ...</strong></p>
+<h3 id="7-parameters">7. Parameters<a class="headerlink" href="#7-parameters" title="Permanent link">&para;</a></h3>
+<p><strong>Choose ... (current: ...):</strong> followed by the suggested values, <strong>[Other value]</strong> and <strong>[Continue]</strong>.</p>
+<ul>
+<li>Click a value to choose it. Chat shows the new value and the next parameter (or the next step) follows.</li>
+<li><strong>[Continue]</strong> keeps the current value.</li>
+<li><strong>[Other value]</strong> asks <strong>Type the value of ... in chat.</strong> An invalid value shows
+  <strong>Invalid value: ...</strong> and asks again. Typing <code>cancel</code> returns to the buttons.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Parameter</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>split_door</code></td>
+<td><strong>Split mode</strong></td>
+<td><strong>Two halves (side by side)</strong>, <strong>Two halves (stacked)</strong>, <strong>Four quadrants (iris)</strong></td>
+</tr>
+<tr>
+<td><code>rolling_shutter</code></td>
+<td><strong>Visible rows</strong></td>
+<td>0 up to the number of rows minus 1</td>
+</tr>
+</tbody>
+</table>
+<p>The other type settings are changed after the creation from the <strong>Type settings</strong> menu or with <code>/dp set</code>.
+See <a href="../editing/#type-settings">Editing and deleting</a>.</p>
+<h3 id="8-triggers">8. Triggers<a class="headerlink" href="#8-triggers" title="Permanent link">&para;</a></h3>
+<p><strong>Add triggers to open the door (optional). Collected: N.</strong> with <strong>[Add trigger]</strong>, <strong>[Done]</strong>, <strong>[Back]</strong> and
+<strong>[Cancel]</strong>.</p>
+<p>The door does not exist yet, so the triggers you add here are collected and linked right after the door is
+created. To add one:</p>
+<ol>
+<li>Click <strong>[Add trigger]</strong>. Chat shows <strong>What do you want to use as trigger?</strong> with <strong>[Block]</strong>,
+   <strong>[Redstone]</strong>, <strong>[Entity]</strong>, <strong>[Proximity]</strong> and <strong>[Back]</strong>.</li>
+<li>Choose the kind:<ul>
+<li><strong>[Block]</strong>: click a block (button, lever, pressure plate, any block, or a custom block).</li>
+<li><strong>[Redstone]</strong>: click a block that will receive redstone power.</li>
+<li><strong>[Entity]</strong>: click an entity, a furniture or an NPC.</li>
+<li><strong>[Proximity]</strong>: type the radius in chat (1 to <code>limits.max-proximity-radius</code>, default 16), then click
+  <strong>[Door centre]</strong> or <strong>[My position]</strong> to place the centre of the zone.</li>
+</ul>
+</li>
+<li>For Block, Redstone and Entity you have <code>triggers.selection-timeout-seconds</code> (default 30) seconds to click.
+   Chat then shows <strong>Captured ... at x, y, z. It will be linked when the door is created.</strong></li>
+<li>The step comes back with the new count. Add more, or click <strong>[Done]</strong>.</li>
+</ol>
+<p>Each click on <strong>[Add trigger]</strong> collects one trigger. Clicking the same source twice shows
+<strong>That source has already been captured.</strong> Block and Entity triggers are created with the action Toggle;
+Redstone and Proximity triggers with Follow state. You need the permission for each kind of trigger
+(<code>doorplus.trigger.&lt;kind&gt;</code>, given to every player by default).</p>
+<p>After the door is created, chat shows <strong>Triggers linked: N/M.</strong> If one cannot be linked (too far from the door,
+inside the door, trigger limit reached and so on), chat shows <strong>Could not link the ... trigger at x, y, z:</strong> and
+the reason. The door is created anyway. See <a href="../../access/triggers/">Triggers</a>.</p>
+<h3 id="9-confirm">9. Confirm<a class="headerlink" href="#9-confirm" title="Permanent link">&para;</a></h3>
+<p><strong>Check the summary and confirm:</strong> followed by the type, name, world, size, pivot, direction, parameters and
+number of triggers, and the buttons <strong>[Create]</strong>, <strong>[Back]</strong> and <strong>[Cancel]</strong>.</p>
+<p>Click <strong>[Create]</strong>. Door+ runs the <a href="#validation-errors">checks below</a>. If they pass, chat shows
+<strong>Door ... created (#id, N blocks).</strong>, the stick is removed and the collected triggers are linked.</p>
+<p>If the destination of the door is blocked, you also see
+<strong>Warning: the destination of the door is obstructed. It will not move until the space is free.</strong> The door is
+created anyway.</p>
+<p>A new door starts with the values of the <code>defaults</code> section of <code>config.yml</code>: privacy <strong>Private</strong>, redstone off,
+protected blocks off, auto-close off, region access off.</p>
+<h2 id="preview">Preview<a class="headerlink" href="#preview" title="Permanent link">&para;</a></h2>
+<p>While you create a door you see particle outlines that only you can see. They are redrawn every half second
+and only when you are within about 128 blocks.</p>
+<table>
+<thead>
+<tr>
+<th>Colour</th>
+<th>Shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light blue</td>
+<td>The selected region (after the first corner: that block)</td>
+</tr>
+<tr>
+<td>Orange</td>
+<td>The pivot, after the pivot step</td>
+</tr>
+<tr>
+<td>Green</td>
+<td>Where the door goes when it moves, once the direction is known</td>
+</tr>
+<tr>
+<td>Red</td>
+<td>Same as green, but something is in the way</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ending-a-creation">Ending a creation<a class="headerlink" href="#ending-a-creation" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>You click <strong>[Cancel]</strong> or type <code>/dp cancel</code></td>
+<td><strong>Door creation cancelled.</strong></td>
+</tr>
+<tr>
+<td>No activity for <code>creation.timeout-seconds</code> (default 120)</td>
+<td><strong>Door creation cancelled because of inactivity.</strong> A warning comes 15 seconds before: <strong>The door creation will be cancelled in 15 seconds of inactivity.</strong></td>
+</tr>
+<tr>
+<td>You die or change world</td>
+<td><strong>Door creation cancelled.</strong></td>
+</tr>
+<tr>
+<td>You leave the server</td>
+<td>The creation ends without a message.</td>
+</tr>
+<tr>
+<td>You click <strong>[Create]</strong> and the door is saved</td>
+<td>The creation ends normally.</td>
+</tr>
+</tbody>
+</table>
+<p>Activity means a successful click with the stick, a click on a button or a chat answer. In every case the stick
+is removed.</p>
+<h2 id="validation-errors">Validation errors<a class="headerlink" href="#validation-errors" title="Permanent link">&para;</a></h2>
+<p>When you click <strong>[Create]</strong>, Door+ checks the door in the order below. At the first problem it shows the
+message and brings you back to the step where you can fix it. The creation stays open.</p>
+<table>
+<thead>
+<tr>
+<th>Message</th>
+<th>Cause</th>
+<th>Fix (step you return to)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Invalid name ...: use 1-32 letters, digits, _ or -.</strong></td>
+<td>Name missing or not valid</td>
+<td>Type a valid name (Name)</td>
+</tr>
+<tr>
+<td><strong>You already own a door named ....</strong></td>
+<td>You already have a door with this name</td>
+<td>Type another name (Name)</td>
+</tr>
+<tr>
+<td><strong>Select both corners first.</strong></td>
+<td>A corner is missing</td>
+<td>Click both corners (First corner)</td>
+</tr>
+<tr>
+<td><strong>The world of the door is not loaded.</strong></td>
+<td>The world was unloaded</td>
+<td>Load the world, then select again (First corner)</td>
+</tr>
+<tr>
+<td><strong>Doors cannot be created in the world ....</strong></td>
+<td>The world is in <code>worlds.disabled</code></td>
+<td>Build in another world (First corner)</td>
+</tr>
+<tr>
+<td><strong>The region goes beyond the height limits of the world.</strong></td>
+<td>The region is above or below the build limits</td>
+<td>Select a lower or higher region (First corner)</td>
+</tr>
+<tr>
+<td>Shape error of the door type</td>
+<td>The region, pivot, direction or parameter does not fit the type</td>
+<td>See <a href="#shape-errors">Shape errors</a></td>
+</tr>
+<tr>
+<td><strong>The region has more than N blocks, the most you can use for a door.</strong></td>
+<td>More door blocks than your size limit (<code>limits.max-door-blocks</code>, default 500)</td>
+<td>Select a smaller region, or ask for a higher limit (First corner)</td>
+</tr>
+<tr>
+<td><strong>The region contains no blocks.</strong></td>
+<td>The region holds only air or replaceable blocks</td>
+<td>Build the door first (First corner)</td>
+</tr>
+<tr>
+<td><strong>The block ... at x, y, z cannot be part of a door.</strong></td>
+<td>A blacklisted block, a block not in the whitelist, or a block with extra data such as a chest or a sign</td>
+<td>Remove that block or select around it (First corner)</td>
+</tr>
+<tr>
+<td><strong>The region overlaps the door ....</strong></td>
+<td>The region touches a block of another door</td>
+<td>Select a region that does not touch other doors (First corner)</td>
+</tr>
+<tr>
+<td><strong>You cannot create a door here (denied by ...).</strong></td>
+<td>A protection plugin (for example WorldGuard) does not allow you to build in the region or where the door moves</td>
+<td>Build where you are allowed, or ask staff (First corner)</td>
+</tr>
+<tr>
+<td><strong>The creation was cancelled by another plugin.</strong></td>
+<td>Another plugin blocked the creation</td>
+<td>Ask staff (Confirm)</td>
+</tr>
+<tr>
+<td><strong>You already own the maximum number of doors (N).</strong></td>
+<td>You reached your door limit during the creation</td>
+<td>Delete a door or ask for a higher limit (Confirm)</td>
+</tr>
+</tbody>
+</table>
+<p>The blocks that can be part of a door are set in the <code>blocks</code> section of <code>config.yml</code>. Staff with
+<code>doorplus.admin.bypass.protection</code> are not stopped by protection plugins; see
+<a href="../../reference/permissions/">Permissions</a>.</p>
+<h3 id="shape-errors">Shape errors<a class="headerlink" href="#shape-errors" title="Permanent link">&para;</a></h3>
+<p>Shape errors come from the door type. They can also appear right when you click a pivot.</p>
+<table>
+<thead>
+<tr>
+<th>Message</th>
+<th>Types</th>
+<th>Fix (step you return to)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Select both corners of the door first.</strong></td>
+<td>All</td>
+<td>Click both corners (First corner)</td>
+</tr>
+<tr>
+<td><strong>The door must be one block thick.</strong></td>
+<td><code>split_door</code>, <code>rolling_shutter</code>, <code>windmill</code></td>
+<td>Select a flat region (First corner)</td>
+</tr>
+<tr>
+<td><strong>The door must be a vertical wall, one block thick.</strong></td>
+<td><code>garage_door</code>, <code>folding_door</code>, <code>flag</code></td>
+<td>Select a vertical wall 1 block thick (First corner)</td>
+</tr>
+<tr>
+<td><strong>The footprint must be square (now A × B).</strong></td>
+<td><code>revolving_door</code></td>
+<td>Make the region as deep as it is wide (First corner)</td>
+</tr>
+<tr>
+<td><strong>The two sides of the face must be equal.</strong></td>
+<td><code>windmill</code></td>
+<td>Make the face square (First corner)</td>
+</tr>
+<tr>
+<td><strong>A clock must be 2 blocks thick with a square vertical face.</strong></td>
+<td><code>clock</code></td>
+<td>Select 2 layers with a square face (First corner)</td>
+</tr>
+<tr>
+<td><strong>The door must be at least 2 blocks wide.</strong></td>
+<td><code>folding_door</code>, <code>flag</code></td>
+<td>Make the panel wider (First corner)</td>
+</tr>
+<tr>
+<td><strong>The door is too small for this split mode: each split side needs at least 2 blocks.</strong></td>
+<td><code>split_door</code></td>
+<td>Choose another split mode or a bigger door (First corner)</td>
+</tr>
+<tr>
+<td><strong>Click a block of the door to set the pivot.</strong></td>
+<td>Types with a pivot</td>
+<td>Click a pivot (Pivot)</td>
+</tr>
+<tr>
+<td><strong>The pivot must be a block of the door.</strong></td>
+<td>Types with a pivot</td>
+<td>Click a block inside the region (Pivot)</td>
+</tr>
+<tr>
+<td><strong>The pivot must be on an edge of the door.</strong></td>
+<td><code>drawbridge</code></td>
+<td>Click a block on the edge of the region (Pivot)</td>
+</tr>
+<tr>
+<td><strong>The pivot must be on one of the two vertical edges of the door.</strong></td>
+<td><code>folding_door</code>, <code>flag</code></td>
+<td>Click a block on the left or right edge (Pivot)</td>
+</tr>
+<tr>
+<td><strong>The pivot axis is not set: click a second block on the pivot row.</strong></td>
+<td><code>drawbridge</code></td>
+<td>Click a second block (Pivot axis)</td>
+</tr>
+<tr>
+<td><strong>Click another block of the pivot row, at the same height as the pivot.</strong></td>
+<td><code>drawbridge</code></td>
+<td>Click a block in line with the pivot, same height (Pivot axis)</td>
+</tr>
+<tr>
+<td><strong>This direction is not valid for this door.</strong></td>
+<td>Types with a direction</td>
+<td>Choose another direction (Direction)</td>
+</tr>
+<tr>
+<td><strong>Visible rows must be between 0 and N.</strong></td>
+<td><code>rolling_shutter</code></td>
+<td>Choose a smaller value (Parameters)</td>
+</tr>
+<tr>
+<td><strong>Unknown split mode.</strong></td>
+<td><code>split_door</code></td>
+<td>Choose a split mode (Parameters)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="redefining-the-region-of-an-existing-door">Redefining the region of an existing door<a class="headerlink" href="#redefining-the-region-of-an-existing-door" title="Permanent link">&para;</a></h2>
+<p><code>/dp redefine &lt;door&gt;</code> (or <strong>Redefine region</strong> in the door menu) runs the corner, pivot, pivot axis and
+direction steps again on an existing door, then shows the summary with <strong>[Apply]</strong> instead of <strong>[Create]</strong>.
+The access list, triggers and settings are kept. The rules, checks and stick are the same as for a new door,
+except that the name is not asked, there are no parameter and trigger steps, and the new region must be in
+the same world. See <a href="../editing/#redefine-the-region">Editing and deleting</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../getting-started/bigdoors-import/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Coming from BigDoors">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Coming from BigDoors
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../types/" class="md-footer__link md-footer__link--next" aria-label="Next: Door types">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Door types
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Cristiaaaaan
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
