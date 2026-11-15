@@ -7,8 +7,9 @@ something does not work as described, see [Troubleshooting](troubleshooting.md).
 
 ### Which servers does Door+ run on?
 
-Paper **1.21.4 or newer**, including the 26.x versions, with one jar for every version. Door+ needs **Java 21** or
-newer. It has been tested on Paper 1.21.4, 1.21.8, 1.21.11, 26.1.1 and 26.3. Spigot and Folia are not supported.
+Paper **1.21.4 or newer**, including the 26.x versions, with one jar for every version. Door+ needs the Java version
+your Paper version needs: 21 for 1.21.x, 25 for 26.x. It has been tested on Paper 1.21.4, 1.21.8, 1.21.11, 26.1.1,
+26.2 and 26.3. Spigot and Folia are not supported.
 
 ### Does it work for Bedrock players (Geyser)?
 
@@ -115,8 +116,8 @@ each player sees messages in their client language when a matching file exists. 
 
 ### Can I change the configuration without restarting?
 
-Yes, with `/dp admin reload`, which reloads `config.yml` and the language files. Only the `storage` section needs
-a restart. See [Configuration](../reference/configuration.md).
+Yes, with `/dp admin reload`, which reloads `config.yml` and the language files. Only the `storage` and
+`integrations` sections need a restart. See [Configuration](../reference/configuration.md).
 
 ## Licence and privacy
 
