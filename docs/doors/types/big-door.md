@@ -3,6 +3,8 @@
 The big door swings 90° around a vertical hinge, like an ordinary door or a castle gate. This page explains how to
 build one, what to click during creation and how it behaves. Creation id: `big_door`.
 
+![Big door: clockwise and counter-clockwise](../../media/type-big_door.gif)
+
 ## What it does
 
 | State | Position |

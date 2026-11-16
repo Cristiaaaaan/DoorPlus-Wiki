@@ -4,6 +4,8 @@ The revolving door turns around a vertical axis through its centre every time it
 each use turns it by 90° (or 180°, 270°) and it always counts as closed. This page explains how to build it and how
 its turns work. Creation id: `revolving_door`.
 
+![Revolving door turning clockwise and counter-clockwise](../../media/type-revolving_door.gif)
+
 ## What it does
 
 | Action | Result |

@@ -3,6 +3,8 @@
 The portcullis slides straight up into the ceiling or straight down into the ground. This page explains how to build
 one, how far it moves and how to plug the hole it leaves. Creation id: `portcullis`.
 
+![Portcullis going up and down](../../media/type-portcullis.gif)
+
 ## What it does
 
 | State | Position |

@@ -4,6 +4,8 @@ The windmill spins continuously around an axis through its centre while it is ac
 a fan, or a carousel when it is built flat. This page explains how to build it, how to choose the spinning direction
 and how to set its speed. Creation id: `windmill`.
 
+![Windmill spinning clockwise and counter-clockwise](../../media/type-windmill.gif)
+
 ## What it does
 
 The windmill is a perpetual type:

@@ -4,6 +4,8 @@ The rolling shutter rolls up into one of its edges, like a shop shutter. The row
 and are stored by Door+, so the shutter needs **no free space** to open. This page explains how it works, the visible
 rows option and what to watch out for. Creation id: `rolling_shutter`.
 
+![Rolling shutter rolling up and sideways](../../media/type-rolling_shutter.gif)
+
 ## What it does
 
 | State | Position |

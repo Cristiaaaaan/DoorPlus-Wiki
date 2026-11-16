@@ -3,6 +3,8 @@
 The sliding door moves sideways, north, east, south or west, usually into a pocket in the wall next to it. This page
 explains how to build one, how far it slides and which direction it picks. Creation id: `sliding_door`.
 
+![Sliding door in the four directions](../../media/type-sliding_door.gif)
+
 ## What it does
 
 | State | Position |

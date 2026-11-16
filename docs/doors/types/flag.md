@@ -3,6 +3,8 @@
 The flag waves continuously while it is active: a wave runs from the pole to the free end, and the free end moves the
 most. This page explains how to build it, where the pole goes and how to tune the wave. Creation id: `flag`.
 
+![Flag waving](../../media/type-flag.gif)
+
 ## What it does
 
 The flag is a perpetual type:

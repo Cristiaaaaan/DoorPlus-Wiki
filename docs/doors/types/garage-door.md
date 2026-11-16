@@ -4,6 +4,8 @@ The garage door is an up-and-over door: it slides up out of the doorway and then
 just above the doorway, inside the building. This page explains how to build it and where the space for the open door
 must be. Creation id: `garage_door`.
 
+![Garage door opening inwards and outwards](../../media/type-garage_door.gif)
+
 ## What it does
 
 | State | Position |

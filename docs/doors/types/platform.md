@@ -4,6 +4,8 @@ The platform moves in a straight line between up to 8 stops and carries the play
 moving floor or a lift bridge. This page explains how to build it, how to set the stops and how to send it to a stop.
 Creation id: `platform`.
 
+![Platform going up through three stops and sideways](../../media/type-platform.gif)
+
 ## What it does
 
 The platform has a list of **stops**: distances in blocks from where you built it, along its direction. Stop 0 is

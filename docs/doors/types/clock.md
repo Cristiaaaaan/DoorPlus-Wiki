@@ -4,6 +4,8 @@ The clock is a perpetual type with two hands that show the time of the Minecraft
 explains how to build the hands, how Door+ decides which side is the front and how to pick the time source. Creation
 id: `clock`.
 
+![Clock hands following the world time](../../media/type-clock.gif)
+
 ## What it does
 
 | State | What you see |

@@ -4,6 +4,8 @@ The drawbridge tips 90° around a horizontal row of blocks, the hinge row. A sta
 a flat floor rises into a wall or drops into a pit (a hatch). This page explains how to build one, which blocks to
 click and how the direction works. Creation id: `drawbridge`.
 
+![Drawbridge lowering towards you and away](../../media/type-drawbridge.gif)
+
 ## What it does
 
 | State | Position |

@@ -3,6 +3,8 @@
 The folding door folds in two like a book while it swings open, so it needs only about half the room of a big door of
 the same width. This page explains how to build it, where it ends up and what to click. Creation id: `folding_door`.
 
+![Folding door folding towards you and away](../../media/type-folding_door.gif)
+
 ## What it does
 
 The door is split into two panels:

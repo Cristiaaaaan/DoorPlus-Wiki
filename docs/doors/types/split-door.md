@@ -4,6 +4,8 @@ The split door divides into two halves or four quarters that slide apart: two wi
 opens top and bottom, or a floor hatch that opens like an iris. This page explains the split modes, where the panels
 go and how to build the space for them. Creation id: `split_door`.
 
+![Split door in its three modes](../../media/type-split_door.gif)
+
 ## What it does
 
 | State | Position |
